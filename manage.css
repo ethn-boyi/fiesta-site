@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+
+
+:root{
+    /* Colors */
+    --white-color:#fff;
+    --dark-color:#252525;
+    --primary-color:#3b141c;
+    --secondary-color:#f3961c;
+    --light-pink-color:#faf4f5;
+    --medium-grey-color:#ccc;
+
+    /* Font size */
+    --font-size-s:0.9rem;
+    --font-size-n:1rem;
+    --font-size-m:1.12rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:2.3rem;
+
+    /* Font weight */
+    --font-weight-normal:400;
+    --font-weight-medium:500;
+    --font-weight-semi-bold:600;
+    --font-weight-bold:700;
+
+    /*border radius */
+    --border-radius-s:8px;
+    --border-radius-m:30px;
+    --border-radius-circle:50px;
+
+    /*site max width */
+    --site-max-width:1300px;
+
+}
+
+
+/*styling for header*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: #f5e6d6;
+}
+.fiesta{
+    width: 60px ;
+    height: 50px;
+    padding-bottom: 1px;
+    margin-left: 5px;
+    padding-top: 20px;
+    margin-bottom: -15px;
+}
+label.logo{
+    color: black;
+    font-size: 21px;
+    line-height: 40px;
+    padding: 0 2px;
+    font-weight: bold;
+    padding-right: 35px;
+    margin-bottom: px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 20px;
+}	
+/* Default: Keep text in one line */
+.logo {
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    white-space: nowrap; /* Prevents wrapping on large screens */
+}
+
+/* Responsive: Stack text in block format for small screens */
+@media (max-width: 900px) {
+    .logo {
+        display: block; /* Forces text to stack */
+        text-align: center; /* Centers the text */
+        font-size: 12px; /* Slightly smaller text for better fit */
+        white-space: normal; /* Allows line breaks */
+        margin-left: 50px;
+    }
+    
+    
+
+    .fiesta {
+        margin-bottom: -50px; /* Adds spacing between logo and text */
+    }
+}
+
+ 
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 6px;
+}
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-weight: var(--font-weight-semi-bold);
+}
+a.active,a:hover{
+    background: var(--secondary-color);
+    transition: .5s;
+    color: white;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    z-index: 999;
+    background-color:rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 25px;
+    
+}
+
+.sidebar li{
+    width: 100%;
+    gap: 5px;
+}
+.sidebar a{
+    width: 100%;
+}
+.materials-symbols-outlined{
+    display: none;
+    
+}
+@media(max-width:1100px){
+    .hideonMobile{
+        display: none;
+    }
+    .materials-symbols-outlined{
+        display: block;
+        height: 1px;
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main container for the management team page */
+.management-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+}
+
+.leader-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align:left;
+    min-width: 130%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+@media(max-width:1000px){
+    .leader-card{
+        width: 50px;
+    }
+}
+
+
+.leader-card:hover {
+    transform: scale(1.05);
+}
+
+.team-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Right Section (Sidebar) */
+.sidebarr {
+    width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    right: 20px; /* Moves it to the far right */
+    top: 100px; /* Ensures it stays visible when scrolling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Links */
+.sidebarr ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebarr ul li {
+    margin-bottom: 15px;
+}
+
+.sidebarr a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.sidebarr a:hover {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    /* For smaller screens, hide sidebar or reposition it */
+    .sidebarr {
+        width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    /* Content margin adjustment when sidebar is repositioned */
+    .content {
+        margin-right: 0;
+    }
+
+    /* Sidebar Toggle Button for mobile */
+    .sidebarr-toggle {
+        display: block;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        border: none;
+        margin-bottom: 20px;
+       
+    }
+
+    /* Initially hide the sidebar */
+    .sidebarr {
+        display: none;
+    }
+
+    /* Show sidebar when active */
+    .sidebarr.active {
+        display: block;
+    }
+}
+
+
+/* Sidebar header */
+.sidebarr h3 {
+    margin-top: 0;
+}
+
+/* Sidebar links */
+.sidebarr ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebarr ul li {
+    margin-bottom: 10px;
+}
+
+.sidebarr ul li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+.terms {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px;
+    margin-left: 50px;
+    
+}

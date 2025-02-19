@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fiesta website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+   
+
+    </head>
+    <body>
+    <!-- Header -->
+     <nav>
+        <img src="/images/fiestalogo.png" class="fiesta">
+        <label class="logo">Fiesta Trainers & Caterers</label>
+        <ul>
+            <li class="hideonMobile"><a class="active" href="index.html">home</a></li>
+            <li class="hideonMobile"><a href="about.html">about</a></li>
+            <li class="hideonMobile"><a href="manage.html">management</a></li>
+            <li class="hideonMobile"><a href="courses.html">courses</a></li>
+            <li class="hideonMobile"> <a href="gallery.html">gallery</a></li>
+            <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+        </ul>
+        <ul class="sidebar">
+            <span class="material-symbols-outlined"onclick="hideSidebar()">✖</span>
+            <li><a class="active" href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="manage.html">management</a></li>
+            <li><a href="courses.html">courses</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+        </ul>
+     </nav>
+       
+       
+        
+    
+        <main>
+            <!-- Hero  section-->
+            <section class="hero">
+                <div class="carousel">
+                    <div class="slide fade">
+                        <img src="/images/graduation/grad.jpg" alt="Image 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="/images/catering/cater.jpg" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="/images/cakes/bakingserve.jpg" alt="Image 3">
+                    </div>
+                </div>
+            
+                <!-- Navigation Buttons -->
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </section>
+            
+        </main>
+            
+            <!-- About section -->
+            <section id="about-us">
+               <h2 >About Fiesta Trainers & Caterers</h2>
+
+                <div class="card-container">
+                    <div class="card">
+                        <img src="/images/our mission (2).jpg" alt="Brief History" class="card-image">
+                        <h3>Brief History</h3>
+                        <p>Fiesta Trainers & Caterers was founded , with the goal of providing exceptional culinary education and catering services. Over the years, we have grown to become a renowned institution in the region.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/images/catering/catering7.jpg" alt="Mission" class="card-image">
+                        <h3>Mission</h3>
+                        <p>Our mission is to impart essential culinary skills to aspiring chefs and caterers, ensuring they are well-equipped to excel in the culinary industry.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/images/graduation/grad.jpg" alt="Vision" class="card-image">
+                        <h3>Vision</h3>
+                        <p>We aim to be the leading culinary training institution in the region, known for our commitment to excellence, innovation, and nurturing talent.</p>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- why-us section -->
+            <div class="divider-section">
+                <div class="line-container">
+                  <div class="orange-line"></div>
+                  <h2 class="divider-heading">Why Fiesta</h2>
+                  <div class="orange-line"></div>
+                </div>
+            </div>
+            <div class="why-choose-us-container">
+                <div class="text-section">
+                    <h2>WHY FIESTA?</h2>
+                    <h3>Top-Notch Facilities</h3>
+                    <p>Our state-of-the-art training centers are equipped with 
+                        the latest technology and amenities to create an ideal learning environment.
+                    </p>
+                    <h3>Trainers</h3>
+                    <p>Our team of professional trainers brings years of experience and 
+                        a deep passion for helping you reach your full potential.
+                    </p>
+                    <h3>Affordable Fees</h3>
+                    <p>: We believe quality training should be accessible to everyone. 
+                        Our competitive pricing ensures you get the best value without breaking the bank.
+                    </p>
+                    <h3> Baking and Catering Services</h3>
+                    <p>Whether it’s a wedding, birthday, or corporate event, 
+                        we offer bespoke baking solutions tailored to your specific needs and preferences.
+                    </p>
+                    <div class="why-choose-us">
+                    </div>
+                    <div class="buttonn">
+                     <a href="about.html"class="buttonn">Learn More</a>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="/images//baking/baking.jpg" alt="Students in a laboratory">
+                </div>
+            </div>
+
+            <!-- courses section -->
+            <div class="divider-section">
+                <div class="line-container">
+                  <div class="orange-line"></div>
+                  <h2 class="divider-heading">Courses We Offer</h2>
+                  <div class="orange-line"></div>
+                </div>
+            </div>
+
+            <section class="courses-section">
+                <div class="slider-buttons">
+                    <button id="prevSlide">◀</button>
+                    <button id="nextSlide">▶</button>
+                </div>
+                <div class="card-slider">
+                    <div class="course-card">
+                        <img src="/images//baking/baker.jpg" alt="Baking">
+                        <h3>Baking and Cake decoration</h3>
+                        <p>Learn the art of baking and decorating exquisite pastries and cakes.</p>
+                        <a href="courses.html#baking" class="know-more-btn">Know More</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="/images//pastry/pastry.jpg" alt="Pastry">
+                        <h3>Pastry</h3>
+                        <p>Master the skills needed to become a professional caterer.</p>
+                        <a href="courses.html#pastry" class="know-more-btn">Know More</a>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="/images//catering/catering.jpg" alt="Catering">
+                        <h3>Catering</h3>
+                        <p>We provide exceptional catering services for various events.</p>
+                        <a href="courses.html#catering" class="know-more-btn">Know More</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="/images//hairandbeauty/hair.jpg" alt="Hair and Beauty">
+                        <h3>Hair and Beauty</h3>
+                        <p>Unlock your potential in the glamorous world of hair and beauty with our comprehensive course.</p>
+                        <a href="courses.html#hair-dressing" class="know-more-btn">Know More</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="/images//comppackages/comppac.jpg" alt="Computer Packages">
+                        <h3>Computer Packages</h3>
+                        <p>Dive into the world of technology with our Computer Packages course.</p>
+                        <a href="courses.html#computer-packages" class="know-more-btn">Know More</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="/images//tailoring/dressmaking.jpg" alt="Computer Packages">
+                        <h3>Dress Making</h3>
+                        <p>Dive into the world of technology with our Computer Packages course.</p>
+                        <a href="courses.html#dress-making" class="know-more-btn">Know More</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="/images//lifeskills/lifeskills.jpg" alt="Computer Packages">
+                        <h3>Entrepreneurship and lifeskills</h3>
+                        <p>Dive into the world of technology with our Computer Packages course.</p>
+                        <a href="courses.html#lifeskills" class="know-more-btn">Know More</a>
+                    </div>
+                   
+                </div>
+            </section>
+            
+            <!-- Video Section -->
+         
+                    <section class="video-section">
+                        <div class="video-container">
+                            <!-- Video Part -->
+                            <div class="video">
+                                <h2>Watch Our Story</h2>
+                                <p>Take a moment to watch our video and learn more about Fiesta Trainers and Caterers!</p>
+                                <video class="homepage-video" controls>
+                                    <source src="videos/tiktokio.com_y2Vge4ty3Vd0cSnnzpJo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <!-- Button Part (Below Video) -->
+                            <div class="button-container">
+                                <a href="gallery.html" class="button">Visit Our Gallery</a>
+                            </div>
+                        </div>
+                    </section>
+
+
+        
+            <!-- footer section -->
+            <footer>
+                <div class="row">
+                    <div class="col">
+                        <h3>office</h3>
+                        <p> Nairobi</p>
+                        <p>Kangudo Road ,Chokaa</p>
+                        <p>Shujaa</p>
+                        <p class="email-id">fiestatrainers@gmail.com</p>
+                        
+                        <h4>+254743670728</h4>
+                    </div>
+                    <div class="col">
+                        <h3>links</h3>
+                        <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="manage.html">management</a></li>
+                        <li><a href="courses.html">courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>newsletter</h3>
+                        <form>
+                            <input type="text" placeholder="Enter e-mail id" required>
+                        </form>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"></a><i class="fab fa-facebook"></i>
+                        <a href="#"></a><i class="fab fa-twitter"></i>
+                        <a href="#"></a><i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="terms">
+                    <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+                </div>
+            </footer>
+
+        <script src="script.js"></script>
+                
+
+        
+    </body>
+</html>

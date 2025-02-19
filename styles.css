@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    /* Colors */
+    --white-color:#fff;
+    --dark-color:#252525;
+    --primary-color:#3b141c;
+    --secondary-color:#f3961c;
+    --light-pink-color:#faf4f5;
+    --medium-grey-color:#ccc;
+
+    /* Font size */
+    --font-size-s:0.9rem;
+    --font-size-n:1rem;
+    --font-size-m:1.12rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:2.3rem;
+
+    /* Font weight */
+    --font-weight-normal:400;
+    --font-weight-medium:500;
+    --font-weight-semi-bold:600;
+    --font-weight-bold:700;
+
+    /*border radius */
+    --border-radius-s:8px;
+    --border-radius-m:30px;
+    --border-radius-circle:50px;
+
+    /*site max width */
+    --site-max-width:1300px;
+
+}
+
+/* styles for whole site */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: #f5e6d6;
+}
+.fiesta{
+    width: 60px ;
+    height: 50px;
+    padding-bottom: 1px;
+    margin-left: 5px;
+    padding-top: 20px;
+}
+label.logo{
+    color: black;
+    font-size: 23px;
+    line-height: 40px;
+    padding: 0 5px;
+    font-weight: bold;
+    padding-right: 25px;
+    margin-bottom: px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 20px;
+}	
+/* Responsive: Stack text in block format for small screens */
+@media (max-width: 900px) {
+    .logo {
+        display: block; /* Forces text to stack */
+        text-align: center; /* Centers the text */
+        font-size: 12px; /* Slightly smaller text for better fit */
+        white-space: normal; /* Allows line breaks */
+        margin-left: 50px;
+    }
+    
+    
+
+    .fiesta {
+        margin-bottom: -50px; /* Adds spacing between logo and text */
+    }
+}
+ 
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 8px;
+}
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-weight: var(--font-weight-semi-bold);
+}
+a.active,a:hover{
+    background: var(--secondary-color);
+    transition: .5s;
+    color: white;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    z-index: 999;
+    background-color:rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.materials-symbols-outlined{
+    display: none;
+}
+@media(max-width:1100px){
+    .hideonMobile{
+        display: none;
+    }
+    .materials-symbols-outlined{
+        display: block;
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/* hero section styling */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Show only the active slide */
+.active {
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* about us section styling */
+#about-us {
+    padding:  20px;
+    text-align: center;
+}
+h2{
+    color:var(--dark-color);
+    font-weight:var(--font-weight-bold);
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+.divider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .line-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .divider-heading {
+    margin: 0 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: white; /* Adjust this if your background color is different */
+    padding: 0 10px;
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/* Change this to the desired font-family */
+  }
+  
+  .orange-line {
+    height: 7px;
+    background: linear-gradient(to bottom, orange, transparent);
+    flex-grow: 1;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-image {
+    width: 200px; /* Increased size */
+    height: 150px; /* Increased size */
+    border-radius: 50%;
+    margin-bottom: 15px; /* Added space between image and text */
+}
+
+h3 {
+    font-size: 24px;
+    color: #e67e22; /* Orange color */
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #333;
+}
+
+/* why-us styling*/
+.divider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .line-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .divider-heading {
+    margin: 0 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: white; /* Adjust this if your background color is different */
+    padding: 20px 10px;
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/* Change this to the desired font-family */
+  }
+  
+  .orange-line {
+    height: 7px;
+    background: linear-gradient(to bottom, orange, transparent);
+    flex-grow: 1;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .why-choose-us-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+.text-section {
+    flex: 1;  /* Makes it take available space */
+    background: #f7941d; /* Keep the orange color */
+    padding: 40px; /* Increase padding for better spacing */
+    border-radius: 8px; /* Optional: keeps rounded corners */
+    color: #000; /* Ensure text is readable */
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        width: 100%; /* Makes it full width on small screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+.text-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.text-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.why-choose-us-container .buttonn{
+    background-color:var(--primary-color); /* Green background */
+            border: none; /* No border */
+            color: rgb(245, 240, 240); /* White text */
+            padding: 5px 15px; /* Some padding */
+            text-align: center; /* Center-aligned text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Make the button inline */
+            font-size: 16px; /* Increase font size */
+            margin: 5px 2px; /* Some margin */
+            cursor: pointer; /* Pointer/hand icon */
+            border-radius: 10px;
+        
+}
+
+.image-section {
+    max-width: 100%;
+}
+.image-section img {
+    max-width: 100%;
+    width: 99%;
+    height: 123%;
+    size: 100%;
+    padding-bottom: 145px;
+    padding-top: 0%;
+    object-fit: cover;
+    min-height: 100%;
+    border-radius: 10px;
+
+}
+@media (max-width: 768px) {
+    .image-section img {
+        display: none;
+    }
+}
+
+
+
+
+/* Style for course section */
+/* Courses Section */
+.courses-section {
+    position: relative;
+    margin: auto;
+    padding: 5px;
+    overflow: hidden;
+}
+
+/* Slider Buttons */
+.slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider-buttons button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Card Slider */
+.card-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+/* Course Card */
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Image */
+.course-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Card Heading */
+.course-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ff6600;
+}
+
+/* Card Text */
+.course-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Know More Button */
+.know-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff6600; /* Orange */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.know-more-btn:hover {
+    background-color: #cc5200; /* Darker Orange */
+}
+
+
+.video-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+
+/*video styling*/
+
+.video-section {
+    display: flex;
+    flex-direction: column;  /* Stack the video and button vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;  /* Adjust the maximum width of the container */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video {
+    margin-bottom: 30px;
+}
+
+.homepage-video {
+    width: 100%;
+    max-width: 700px;  /* Limit the video size */
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF6F00; /* Orange color */
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #FF8C00; /* Hover effect */
+}
+
+
+/*footer styling*/
+
+footer{
+    width: 100%;
+    height: 600%;
+    bottom: 20%;
+    background: linear-gradient(to right,#00093c,#2d0b00);
+    color: #fff;
+    padding: 50px 60px;
+    font-size: 13px;
+    line-height: 20px
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.logo{
+    width: 80%;
+    margin-bottom: 30px;
+}
+h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+ul{
+    margin: right 10px;;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.footer li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.social-icons .fab{
+   
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.footer hr {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #ccc; /* Thinner solid line */
+    margin: 20px 0; /* Adjust the spacing */
+    position: relative;
+}
+
+.footer hr:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, #d4cfcf, transparent); /* Gradient effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.footer hr:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, #bfbbbb, transparent); /* Another gradient effect for added style */
+    position: absolute;
+    top: 1px;
+    left: 0;
+    z-index: -2;
+}
+.terms {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px;
+    margin-left:50px;
+   
+}

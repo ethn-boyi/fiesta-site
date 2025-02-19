@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fiesta about page</title>
+        <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    </head>
+    <body>
+        <!-- Header -->
+        <nav>
+            <img src="/images/fiestalogo.png" class="fiesta">
+            <label class="logo">Fiesta Trainers & Caterers</label>
+            <ul>
+                <li class="hideonMobile"><a  href="index.html">home</a></li>
+                <li class="hideonMobile"><a href="about.html">about</a></li>
+                <li class="hideonMobile"><a href="manage.html">management</a></li>
+                <li class="hideonMobile"><a href="courses.html">courses</a></li>
+                <li class="hideonMobile"> <a class="active"href="gallery.html">gallery</a></li>
+                <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+            </ul>
+            <ul class="sidebar">
+                <span class="material-symbols-outlined"onclick="hideSidebar()">✖</span>
+                <li><a  href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="manage.html">management</a></li>
+                <li><a href="courses.html">courses</a></li>
+                <li><a class="active"href="gallery.html">gallery</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <h1>Our Gallery</h1>
+            <p>Explore the highlights of our training sessions, events, and catering services.</p>
+        </header>
+
+        <!-- Thumbnail Grid -->
+        <div class="thumbnail-grid">
+            <div class="thumbnail">
+                <img src="images/graduation/graduate.jpg" 
+                    alt="Catering Dish 1" 
+                    onclick="openLightbox('images/graduation/graduate.jpg', 'Graduate Eric.')">
+                <p class="image-description">Graduate Eric.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/graduation/graduatee.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/graduation/graduatee.jpg', 'graduate Mitchelle.')">
+                <p class="image-description">Graduate Mitchelle.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/graduation/graduation pics.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/graduation/graduation pics.jpg', 'Martha, Tr.Mourine, Jane and Shantel.')">
+                <p class="image-description">Martha, Tr.Mourine, Jane and Shantel .</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/graduation/ourgrad.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/graduation/ourgrad.jpg', 'Graduate Irene.')">
+                <p class="image-description">Graduate Irene.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/baking/bakecake.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/baking/bakecake.jpg', 'Baking Class.')">
+                <p class="image-description">Baking Class.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/baking/bakeinstructions.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/baking/bakeinstructions.jpg', 'A baking class.')">
+                <p class="image-description">A baking class.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/baking/baker.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/baking/baking1.jpg', 'baking.')">
+                <p class="image-description">baking.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/baking/bakestident.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/baking/bakestident.jpg', 'Alumni working at a bakery.')">
+                <p class="image-description">Alumni working at a bakery.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/baking/baking2.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/baking/baking2.jpg', 'cake icing.')">
+                <p class="image-description">cake icing.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakedecoration/cakedeco.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakedecoration/cakedeco.jpg', 'Cake Decoration.')">
+                <p class="image-description">Cake Decoration.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakedecoration/decorating cakes.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakedecoration/decorating cakes.jpg', 'cake icing.')">
+                <p class="image-description">cake icing.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/chaidesign.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastry/chaidesign.jpg', 'pastry.')">
+                <p class="image-description">pastry.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/mamamandazi.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastry/mamamandazi.jpg', 'pastry.')">
+                <p class="image-description">pastry.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/milkshake.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastry/milkshake.jpg', 'pastry.')">
+                <p class="image-description">pastry.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/pastry.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastry/pastry.jpg', 'pastry.')">
+                <p class="image-description">pastry.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/pastry2.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastry/pastry2.jpg', 'pastry.')">
+                <p class="image-description">pastry.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/pastrydonughts.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastrydonughts.jpg', 'donughts.')">
+                <p class="image-description">donughts.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/pastry/sambudemo.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/pastry/sambudemo.jpg', 'pastry class.')">
+                <p class="image-description">pastry class.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/catering/catering.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/catering/catering.jpg', 'Catering class.')">
+                <p class="image-description">Catering class.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/catering/catering7.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/catering/catering7.jpg', 'Catering.')">
+                <p class="image-description">Catering.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/catering/cateringserve.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/catering/cateringserve.jpg', 'Catering srevices.')">
+                <p class="image-description">Catering srevices.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/catering/cateringkuku.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/catering/cateringkuku.jpg', 'work of our catering students.')">
+                <p class="image-description">work of our catering students.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/catering/matumbo.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/catering/matumbo.jpg', 'catering.')">
+                <p class="image-description">catering.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/comppackages/School-Computer-Lab.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/comppackages/School-Computer-Lab', 'Our computer Lab.')">
+                <p class="image-description">Our computer Lab.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/comppackages/comppac.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/comppackages/comppac.jpg', 'computer class.')">
+                <p class="image-description">computer class.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/comppackages/computer lab.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/comppackages/computer lab.jpg', 'computer lab.')">
+                <p class="image-description">computer lab.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/comppackages/compclass.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/comppackages/compclass.jpg', 'Computer class.')">
+                <p class="image-description">Computer class.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/hairandbeauty/hair.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/hairandbeauty/hair.jpg', 'hair and beauty.')">
+                <p class="image-description">hair and beauty.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/hairandbeauty/hair1.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/hairandbeauty/hair1.jpg', 'hair and beauty.')">
+                <p class="image-description">hair and beauty.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/hairandbeauty/Diploma-in-Hair-Dressing-Beauty-3.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/hairandbeauty/Diploma-in-Hair-Dressing-Beauty-3', 'Hair dressing.')">
+                <p class="image-description">Hair dressing.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/lifeskills/entrepre.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/lifeskills/entrepre.jpg', 'Entrepreneurship and life skills.')">
+                <p class="image-description">Entrepreneurship and life skills.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/lifeskills/lifeskills1.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/lifeskills/lifeskills1.jpg', 'Entrepreneurship and life skills.')">
+                <p class="image-description">Entrepreneurship and life skills.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/tailoring/dress1.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/tailoring/dress1.jpg', 'dress making.')">
+                <p class="image-description">dress making.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/cakepot.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/cakepot.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/cakewedding.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/cakewedding.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/caking.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/caking.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/eventcake.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/eventcake.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/gradcake.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/gradcake.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/greencake.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/greencake.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="images/cakes/wediing.jpg" 
+                    alt="Baking Item 1" 
+                    onclick="openLightbox('images/cakes/wediing.jpg', 'Our baking services.')">
+                <p class="image-description">Our baking services.</p>
+            </div>
+            
+        </div>
+        <!-- footer section -->
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <h3>office</h3>
+                    <p> Nairobi</p>
+                    <p>Kangudo Road ,Chokaa</p>
+                    <p>Shujaa</p>
+                    <p class="email-id">fiestatrainers@gmail.com</p>
+                    
+                    <h4>+254743670728</h4>
+                </div>
+                <div class="col">
+                    <h3>links</h3>
+                    <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="courses.html">courses</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>newsletter</h3>
+                    <form>
+                        <input type="text" placeholder="Enter e-mail id" required>
+                    </form>
+                </div>
+                <div class="social-icons">
+                    <a href="#"></a><i class="fab fa-facebook"></i>
+                    <a href="#"></a><i class="fab fa-twitter"></i>
+                    <a href="#"></a><i class="fab fa-youtube"></i>
+                </div>
+            </div><br><br>
+            <hr><br>
+            <div class="terms">
+                <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+            </div>
+        </footer>
+
+
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>
