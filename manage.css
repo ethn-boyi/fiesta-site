@@ -218,7 +218,7 @@ a:hover {
 
 .team-image {
     width: 180px;
-    height: 180px;
+    height: 220px;
     border-radius: var(--border-radius-circle);
     object-fit: cover;
     margin: 0 auto var(--space-l);
