@@ -1,0 +1,121 @@
+/* Hero Section */
+.admission-hero {
+  position: relative;
+  height: 350px;
+  background: linear-gradient(135deg, rgba(59, 20, 28, 0.85), rgba(243, 150, 28, 0.75)),
+              url('https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/training.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+}
+
+.admission-hero .hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.admission-hero .hero-content p {
+  font-size: 1.2rem;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Main Content */
+.admission-content {
+  padding: var(--space-xl) 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Grid Cards */
+.admission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-l);
+  margin-bottom: var(--space-xl);
+}
+
+.admission-card {
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.admission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--secondary-color), #ff8f20);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.card-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.admission-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.admission-card ul {
+  list-style: none;
+  padding: 0;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.admission-card ul li::before {
+  content: "✔ ";
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-m);
+  margin-top: var(--space-l);
+}
+
+.step {
+  background: white;
+  padding: var(--space-m);
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-n);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.step i {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+}

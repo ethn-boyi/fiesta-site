@@ -70,7 +70,7 @@ html {
 nav {
     height: 80px;
     width: 100%;
-    background: #f5e6d6;
+    background: rgba(245, 230, 214, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
     display: flex;
@@ -104,6 +104,10 @@ nav ul {
     gap: var(--space-s);
 }
 
+nav ul li {
+    position: relative;
+}
+
 nav ul li a {
     color: var(--dark-color);
     font-size: var(--font-size-n);
@@ -114,6 +118,14 @@ nav ul li a {
     font-weight: var(--font-weight-medium);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-icon {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
 }
 
 a.active,
@@ -123,6 +135,72 @@ a:hover {
     border-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 280px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius-s);
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-content a {
+    color: var(--dark-color);
+    padding: var(--space-s) var(--space-m);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    text-transform: none;
+    font-weight: var(--font-weight-normal);
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.dropdown-content a:hover {
+    background: var(--light-pink-color);
+    color: var(--primary-color);
+    transform: translateX(5px);
+    border-color: transparent;
+}
+
+.dropdown-content a i {
+    color: var(--secondary-color);
+    width: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
 }
 
 /* Sidebar */
@@ -182,6 +260,7 @@ a:hover {
         width: 100%;
     }
 }
+
 
 /* Management Container */
 .management-container {

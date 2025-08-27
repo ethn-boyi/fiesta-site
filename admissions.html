@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Requirements - Fiesta Trainers & Caterers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admissions.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+    <label class="logo">Fiesta Trainers & Caterers</label>
+    <ul>
+      <li class="hideonMobile"><a href="index.html">home</a></li>
+      <li class="hideonMobile dropdown">
+        <a href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+        <div class="dropdown-content">
+          <a href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+          <a class="active" href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+          <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+          <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+          <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+        </div>
+      </li>
+      <li class="hideonMobile"><a href="manage.html">management</a></li>
+      <li class="hideonMobile dropdown">
+        <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+        <div class="dropdown-content">
+          <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+          <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+          <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+          <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+        </div>
+      </li>
+      <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+      <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+    </ul>
+    <ul class="sidebar">
+      <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="manage.html">management</a></li>
+      <li><a href="courses.html">courses</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero admission-hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Admission Without Formal Qualifications</h1>
+        <p>Inclusive training opportunities for every learner</p>
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a> / <a href="about.html">About</a> / <span>Admission Requirements</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <div class="intro-section">
+    <div class="container">
+      <h2>Learning Beyond Barriers</h2>
+      <p>
+        At Fiesta Trainers and Caterers, we welcome learners who may not have KCSE or formal schooling. 
+        Our inclusive programs are designed to empower individuals with <strong>practical, income-generating skills</strong> 
+        based on interest, aptitude, and readiness.
+      </p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider-section">
+    <div class="line-container">
+      <div class="orange-line"></div>
+      <h2 class="divider-heading">Accessible Courses</h2>
+      <div class="orange-line"></div>
+    </div>
+  </div>
+
+  <!-- Courses Grid -->
+  <section class="admission-content">
+    <div class="container admission-grid">
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-scissors"></i></div>
+        <h3>Dressmaking & Tailoring</h3>
+        <p>Open to all, even without KCSE. Build your future in garment construction and fashion design.</p>
+        <ul>
+          <li>Basic literacy preferred</li>
+          <li>Interest in fashion</li>
+          <li>Careers: tailoring, uniform production, fashion entrepreneurship</li>
+        </ul>
+      </div>
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-house-user"></i></div>
+        <h3>Home Care Training</h3>
+        <p>No formal education required. Ideal for compassionate learners ready to support families.</p>
+        <ul>
+          <li>Good interpersonal skills</li>
+          <li>Age 16+ recommended</li>
+          <li>Careers: nanny, housekeeper, caregiver, hospitality support</li>
+        </ul>
+      </div>
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-gem"></i></div>
+        <h3>Beadwork & Jewelry Design</h3>
+        <p>Fully open entry. Express creativity and craftsmanship for self-employment or artisan markets.</p>
+        <ul>
+          <li>Hand-eye coordination</li>
+          <li>No academic requirements</li>
+          <li>Careers: jewelry design, artisan crafts</li>
+        </ul>
+      </div>
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>Special Needs Training</h3>
+        <p>Open to caregivers & community workers with empathy and patience.</p>
+        <ul>
+          <li>Basic communication skills</li>
+          <li>No prior experience required</li>
+          <li>Careers: NGO work, inclusive classroom support, caregiving</li>
+        </ul>
+      </div>
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Catering</h3>
+        <p>Passion for food? No academic requirements — just commitment to hygiene and cooking.</p>
+        <ul>
+          <li>Basic hygiene knowledge</li>
+          <li>Ability to follow instructions</li>
+          <li>Careers: cook, catering assistant, food vendor</li>
+        </ul>
+      </div>
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-bread-slice"></i></div>
+        <h3>Baking Technology</h3>
+        <p>Learn professional baking and pastry skills. Open to all passionate learners.</p>
+        <ul>
+          <li>Creativity & interest required</li>
+          <li>Basic literacy helpful</li>
+          <li>Careers: bakery assistant, pastry chef, bakery entrepreneur</li>
+        </ul>
+      </div>
+
+      <div class="admission-card">
+        <div class="card-icon"><i class="fas fa-birthday-cake"></i></div>
+        <h3>Cake Decoration</h3>
+        <p>Turn your artistic flair into a career in event and wedding cake design.</p>
+        <ul>
+          <li>Hand-eye coordination</li>
+          <li>No academic requirements</li>
+          <li>Careers: event cake designer, freelance pastry artist</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Admission Process -->
+  <div class="divider-section">
+    <div class="line-container">
+      <div class="orange-line"></div>
+      <h2 class="divider-heading">General Admission Process</h2>
+      <div class="orange-line"></div>
+    </div>
+  </div>
+
+  <section class="process-steps container">
+    <div class="step"><i class="fas fa-file-alt"></i> Fill out application form</div>
+    <div class="step"><i class="fas fa-id-card"></i> Provide ID or birth certificate</div>
+    <div class="step"><i class="fas fa-comments"></i> Attend orientation/interview</div>
+    <div class="step"><i class="fas fa-camera"></i> Submit passport-size photos</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col">
+        <h3>office</h3>
+        <p> Nairobi</p>
+        <p>Kangudo Road, Chokaa</p>
+        <p>Shujaa</p>
+        <p class="email-id">fiestatrainers@gmail.com</p>
+        <h4>+254743670728</h4>
+      </div>
+      <div class="col">
+        <h3>links</h3>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="manage.html">management</a></li>
+          <li><a href="courses.html">courses</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <hr><br>
+    <div class="terms">
+      <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

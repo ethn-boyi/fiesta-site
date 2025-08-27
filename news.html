@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Achievements - Fiesta Trainers & Caterers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="news.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <nav>
+    <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta" alt="Fiesta Logo">
+    <label class="logo">Fiesta Trainers & Caterers</label>
+    <ul>
+      <li class="hideonMobile"><a href="index.html">home</a></li>
+      <!-- About dropdown -->
+      <li class="hideonMobile dropdown">
+        <a href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+        <div class="dropdown-content">
+          <a href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+          <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+          <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+          <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+          <a href="news.html" class="active"><i class="fas fa-trophy"></i> News & Achievements</a>
+        </div>
+      </li>
+      <li class="hideonMobile"><a href="manage.html">management</a></li>
+      <!-- Courses dropdown -->
+      <li class="hideonMobile dropdown">
+        <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+        <div class="dropdown-content">
+          <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+          <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+          <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+          <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+        </div>
+      </li>
+      <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+      <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+    </ul>
+    <ul class="sidebar">
+      <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="manage.html">management</a></li>
+      <li><a href="courses.html">courses</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="news-hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1><i class="fas fa-newspaper"></i> News & Achievements</h1>
+      <p>Celebrating milestones, empowering communities, and sharing our journey.</p>
+    </div>
+  </section>
+
+  <!-- SVG clip-paths -->
+  <svg width="0" height="0">
+    <defs>
+      <!-- Inverted triangle with curved soft edges -->
+      <clipPath id="inverted-triangle-soft" clipPathUnits="objectBoundingBox">
+        <path d="M0.1,0.1 Q0.5,0.05 0.9,0.1 Q0.85,0.4 0.7,0.7 Q0.5,0.95 0.3,0.7 Q0.15,0.4 0.1,0.1 Z"/>
+      </clipPath>
+      <!-- Rectangular with soft edges -->
+      <clipPath id="rectangle-soft" clipPathUnits="objectBoundingBox">
+        <path d="M0.05,0.05 Q0.5,0.02 0.95,0.05 Q0.98,0.5 0.95,0.95 Q0.5,0.98 0.05,0.95 Q0.02,0.5 0.05,0.05 Z"/>
+      </clipPath>
+      <!-- Circle with soft edges -->
+      <clipPath id="circle-soft" clipPathUnits="objectBoundingBox">
+        <circle cx="0.5" cy="0.5" r="0.45"/>
+      </clipPath>
+      <!-- Keep original triangle -->
+      <clipPath id="triangle-rounded-flip" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.1 Q0.5,0 1,0.1 Q0.55,0.95 0.5,1 Q0.45,0.95 0,0.1 Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <main class="news-main">
+
+    <!-- News - Rectangular with soft faded edges -->
+    <section class="news-block fade-up">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="News presence" class="rectangle-soft-shape">
+      </div>
+      <div class="news-content">
+        <h2><i class="fas fa-newspaper"></i> News Presence</h2>
+        <p>Fiesta Trainers and Caterers maintains an active presence on platforms like Facebook, where they showcase student activities, practical sessions, and course highlights. Their digital footprint reflects a growing reputation in vocational training—especially in pastry, bakery, and cake decoration.</p>
+      </div>
+    </section>
+
+    <!-- Achievements - Rectangular with soft faded edges -->
+    <section class="news-block reverse fade-up">
+      <div class="news-image">
+        <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/graduation/ourgraduate.jpg" alt="Achievements" class="rectangle-soft-shape">
+      </div>
+      <div class="news-content">
+        <h2><i class="fas fa-trophy"></i> Achievements</h2>
+        <ul>
+          <li><b>Hands-On Training Model:</b> Fiesta offers both online and physical classes, typically in 3-month modules, making vocational education accessible to diverse learners.</li>
+          <li><b>Community Empowerment:</b> Welcoming students without formal qualifications, offering practical skills in catering, dressmaking, beadwork, and special needs training.</li>
+          <li><b>Youth Skill Development:</b> Helping young people transition into self-employment and artisan careers, especially in Nairobi's informal and creative sectors.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Events - Rectangular with soft faded edges -->
+    <section class="news-block fade-up">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Events" class="rectangle-soft-shape">
+      </div>
+      <div class="news-content">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+        <ul>
+          <li>🎓 Graduation Ceremonies at the end of each training cycle</li>
+          <li>🏫 Open Days for new student intake and course demonstrations</li>
+          <li>🍰 Practical Exhibitions showcasing student work in baking, dressmaking, and beadwork</li>
+          <li>🤝 Community Outreach Programs tied to home care and special needs training</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Scholarships - Rectangular with soft faded edges -->
+    <section class="news-block reverse fade-up">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Scholarships" class="rectangle-soft-shape">
+      </div>
+      <div class="news-content">
+        <h2><i class="fas fa-graduation-cap"></i> Scholarship & Bursary Support</h2>
+        <p>Fiesta Trainers and Caterers is committed to making vocational education accessible to all, especially learners from underserved communities. To support this mission, the college facilitates partial bursary assistance through strategic partnerships and community-based networks.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col">
+        <h3>office</h3>
+        <p>Nairobi</p>
+        <p>Kangundo Road, Chokaa</p>
+        <p>Shujaa</p>
+        <p class="email-id">fiestatrainers@gmail.com</p>
+        <h4>+254743670728</h4>
+      </div>
+      <div class="col">
+        <h3>links</h3>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="manage.html">management</a></li>
+          <li><a href="courses.html">courses</a></li>
+          <li><a href="gallery.html">gallery</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <hr>
+    <div class="terms">
+      <p>Copyright © 2025 Fiesta Trainers & Caterers. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up animation
+    const sections = document.querySelectorAll(".fade-up");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>

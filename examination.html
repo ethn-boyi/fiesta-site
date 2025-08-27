@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Information - Fiesta Trainers & Caterers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="examination.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!-- Header -->
+    <nav>
+        <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+        <label class="logo">Fiesta Trainers & Caterers</label>
+        <ul>
+            <li class="hideonMobile"><a href="index.html">home</a></li>
+            
+            <!-- About dropdown -->
+            <li class="hideonMobile dropdown">
+                <a href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <div class="dropdown-content">
+                    <a href="examination.html" class="active"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+                    <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+                    <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+                    <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+                    <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+                </div>
+            </li>
+            
+            <li class="hideonMobile"><a href="manage.html">management</a></li>
+            
+            <!-- Courses dropdown -->
+            <li class="hideonMobile dropdown">
+                <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <div class="dropdown-content">
+                    <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+                    <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+                    <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+                    <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+                </div>
+            </li>
+            
+            <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+            <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+        </ul>
+        <ul class="sidebar">
+            <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="manage.html">management</a></li>
+            <li><a href="courses.html">courses</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Examination Information</h1>
+                    <p>Understanding Our Assessment Standards & Certification Process</p>
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a> / <a href="about.html">About</a> / <span>Examination Information</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="exam-content">
+            <div class="container">
+                <!-- Introduction -->
+                <div class="intro-section">
+                    <h2>Competency-Based Education & Training (CBET)</h2>
+                    <p>Fiesta Trainers and Caterers follows the Competency-Based Education and Training (CBET) model under TVETA guidelines, with assessments aligned to KNEC and NITA standards for certification. Our comprehensive assessment approach ensures students are properly evaluated on both theoretical knowledge and practical skills.</p>
+                </div>
+
+                <!-- Assessment Types -->
+                <div class="section-divider">
+                    <div class="line-container">
+                        <div class="orange-line"></div>
+                        <h2 class="divider-heading">Assessment Types</h2>
+                        <div class="orange-line"></div>
+                    </div>
+                </div>
+
+                <div class="assessment-grid">
+                    <div class="assessment-card">
+                        <div class="card-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Continuous Assessment Tests (CATs)</h3>
+                        <p>Conducted during training to evaluate practical and theoretical understanding. These ongoing assessments help track student progress and identify areas needing additional support.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Regular Evaluation</span>
+                            <span class="feature-tag">Progress Tracking</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Final Examinations</h3>
+                        <p>Administered at the end of each module or term, often registered through KNEC and NITA. These comprehensive exams test the complete curriculum coverage.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">KNEC Registered</span>
+                            <span class="feature-tag">NITA Certified</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="card-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <h3>Practical Evaluations</h3>
+                        <p>Especially important for hands-on courses like dressmaking, beadwork, catering, and beauty therapy. Students demonstrate their acquired skills in real-world scenarios.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Hands-on Skills</span>
+                            <span class="feature-tag">Real-world Application</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="card-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Portfolio & Project Work</h3>
+                        <p>For courses like special needs training and home care, showcasing applied skills through comprehensive portfolios and practical project implementations.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Applied Skills</span>
+                            <span class="feature-tag">Portfolio Based</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grading System -->
+                <div class="section-divider">
+                    <div class="line-container">
+                        <div class="orange-line"></div>
+                        <h2 class="divider-heading">KNEC Grading System</h2>
+                        <div class="orange-line"></div>
+                    </div>
+                </div>
+
+                <div class="grading-section">
+                    <div class="grading-intro">
+                        <h3>TVET & College Level Grade Parameters</h3>
+                        <p>The following percentages constitute standard final grade parameters used in our assessment system:</p>
+                    </div>
+
+                    <div class="grades-container">
+                        <div class="grade-card high-distinction">
+                            <div class="grade-header">
+                                <span class="grade-letter">HD</span>
+                                <span class="grade-range">85% - 100%</span>
+                            </div>
+                            <h4>High Distinction</h4>
+                            <p>Exceptional performance demonstrating comprehensive mastery of all course objectives and outstanding practical skills.</p>
+                        </div>
+
+                        <div class="grade-card distinction">
+                            <div class="grade-header">
+                                <span class="grade-letter">DN</span>
+                                <span class="grade-range">75% - 84%</span>
+                            </div>
+                            <h4>Distinction</h4>
+                            <p>Very good performance showing strong understanding and proficient practical application of course material.</p>
+                        </div>
+
+                        <div class="grade-card credit">
+                            <div class="grade-header">
+                                <span class="grade-letter">CR</span>
+                                <span class="grade-range">65% - 74%</span>
+                            </div>
+                            <h4>Credit</h4>
+                            <p>Good performance indicating solid grasp of course content with competent practical skills demonstration.</p>
+                        </div>
+
+                        <div class="grade-card pass">
+                            <div class="grade-header">
+                                <span class="grade-letter">PS</span>
+                                <span class="grade-range">50% - 64%</span>
+                            </div>
+                            <h4>Pass</h4>
+                            <p>Satisfactory performance meeting minimum requirements for course completion and basic skill competency.</p>
+                        </div>
+
+                        <div class="grade-card marginal-fail">
+                            <div class="grade-header">
+                                <span class="grade-letter">MF</span>
+                                <span class="grade-range">Below 50%</span>
+                            </div>
+                            <h4>Marginal Fail</h4>
+                            <p>Performance below minimum standard requiring additional support or course repetition.</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Grade Information -->
+                    <div class="grade-info-section">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>CRNM: Course Requirements Not Met</h4>
+                                <p>Occurs when a student misses an exam or fails to complete required coursework. Students must fulfill all requirements before certification.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-redo"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Referred Units</h4>
+                                <p>Students may proceed to the next module with up to 2 failed units but must re-sit them later before final certification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification Process -->
+                <div class="section-divider">
+                    <div class="line-container">
+                        <div class="orange-line"></div>
+                        <h2 class="divider-heading">Certification & Progression</h2>
+                        <div class="orange-line"></div>
+                    </div>
+                </div>
+
+                <div class="certification-section">
+                    <div class="cert-requirements">
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h3>Graduation Requirements</h3>
+                            <ul>
+                                <li>Students must attain a minimum of Pass (Grade 5 or 6) in all units to graduate</li>
+                                <li>Complete all practical assessments and project work</li>
+                                <li>Maintain minimum 80% attendance throughout the course</li>
+                                <li>Submit all required coursework and portfolio materials</li>
+                            </ul>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h3>Re-examination Process</h3>
+                            <ul>
+                                <li>Referred units must be cleared through re-sits before final certification</li>
+                                <li>Re-examination opportunities are provided each term</li>
+                                <li>Additional tutoring support available for struggling students</li>
+                                <li>Maximum of 2 re-sit attempts per unit</li>
+                            </ul>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3>Certificate Issuance</h3>
+                            <ul>
+                                <li>Certificates issued upon successful completion of all requirements</li>
+                                <li>KNEC and NITA recognized certification</li>
+                                <li>Digital and physical certificate copies provided</li>
+                                <li>Transcripts available for further education or employment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <div class="cta-content">
+                        <h2>Ready to Begin Your Journey?</h2>
+                        <p>Join hundreds of successful graduates who have achieved their career goals through our comprehensive training programs.</p>
+                        <div class="cta-buttons">
+                            <a href="https://form.jotform.com/252374240578561" class="cta-btn primary">Apply Now</a>
+                            <a href="courses.html" class="cta-btn secondary">View Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <h3>office</h3>
+                <p>Nairobi</p>
+                <p>Kangudo Road, Chokaa</p>
+                <p>Shujaa</p>
+                <p class="email-id">fiestatrainers@gmail.com</p>
+                <h4>+254743670728</h4>
+            </div>
+            <div class="col">
+                <h3>links</h3>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="manage.html">management</a></li>
+                    <li><a href="courses.html">courses</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <hr><br>
+        <div class="terms">
+            <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

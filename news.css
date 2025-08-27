@@ -1,0 +1,118 @@
+/* Hero */
+.news-hero {
+  position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(59, 20, 28, 0.9), rgba(243, 150, 28, 0.7)),
+    url('https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/archievement.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+    overflow: hidden;
+}
+
+
+.news-hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.news-hero .hero-text {
+  position: relative;
+  z-index: 1;
+}
+.news-hero h1 {
+  font-size: 3rem;
+  color: orange;
+}
+.news-hero p {
+  font-size: 1.2rem;
+}
+
+/* Alternating Layout */
+.news-main {
+  width: 90%;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.news-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.news-block.reverse {
+  flex-direction: row-reverse;
+}
+.news-image {
+  flex: 1;
+}
+
+/* Image Shapes with Soft Faded Edges */
+
+/* All images now use rectangular with soft and faded edges */
+.rectangle-soft-shape {
+  width: 60%;
+  height: auto;
+  clip-path: url(#rectangle-soft);
+  border-radius: 15px;
+  filter: brightness(0.75);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%),
+                      linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%),
+              linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  mask-composite: intersect;
+}
+
+.rectangle-soft-shape:hover {
+  transform: scale(1.03);
+  filter: brightness(0.85);
+}
+
+.news-content {
+  flex: 1;
+}
+.news-content h2 {
+  color: orange;
+  margin-bottom: 15px;
+}
+.news-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+.news-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .news-block,
+  .news-block.reverse {
+    flex-direction: column;
+  }
+  
+  /* Adjust image sizes on mobile */
+  .rectangle-soft-shape {
+    width: 80%;
+  }
+}
