@@ -1,0 +1,227 @@
+ .course-hero {
+            background: linear-gradient(135deg, rgba(59, 20, 28, 0.9), rgba(243, 150, 28, 0.8)), 
+                        url('https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/comppackages/comppac.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+        }
+
+        .course-hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: var(--space-m);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .course-hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .course-content {
+            max-width: var(--site-max-width);
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-l);
+        }
+
+        .course-overview {
+            background: white;
+            border-radius: var(--border-radius-l);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-m);
+            margin-top: var(--space-l);
+        }
+
+        .stat-box {
+            background: var(--light-pink-color);
+            padding: var(--space-m);
+            border-radius: var(--border-radius-s);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .stat-box .stat-number {
+            font-size: var(--font-size-l);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
+        }
+
+        .courses-grid {
+            display: grid;
+            gap: var(--space-xl);
+        }
+
+        .course-section {
+            background: white;
+            border-radius: var(--border-radius-l);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .course-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: var(--space-l);
+            display: flex;
+            align-items: center;
+            gap: var(--space-m);
+        }
+
+        .course-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .course-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--font-size-xl);
+            margin: 0;
+        }
+
+        .course-body {
+            padding: var(--space-xl);
+        }
+
+        .month-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-l);
+            margin-top: var(--space-l);
+        }
+
+        .month-card {
+            background: var(--light-pink-color);
+            border-radius: var(--border-radius-s);
+            padding: var(--space-l);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .month-card h4 {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: var(--space-m);
+            display: flex;
+            align-items: center;
+            gap: var(--space-s);
+        }
+
+        .month-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .month-card li {
+            margin-bottom: var(--space-s);
+            padding-left: var(--space-l);
+            position: relative;
+        }
+
+        .month-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .apply-section {
+            background: linear-gradient(135deg, var(--secondary-color), #ff8f20);
+            color: white;
+            padding: var(--space-xl);
+            border-radius: var(--border-radius-l);
+            text-align: center;
+            margin-top: var(--space-xl);
+        }
+
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-s);
+            background: var(--primary-color);
+            color: white;
+            padding: var(--space-m) var(--space-xl);
+            border-radius: var(--border-radius-m);
+            text-decoration: none;
+            font-weight: var(--font-weight-semi-bold);
+            margin-top: var(--space-m);
+            transition: all 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .additional-info {
+            background: white;
+            border-radius: var(--border-radius-l);
+            padding: var(--space-xl);
+            margin-top: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-l);
+            margin-top: var(--space-l);
+        }
+
+        .info-card {
+            text-align: center;
+            padding: var(--space-m);
+        }
+
+        .info-card .icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-pink-color);
+            border-radius: var(--border-radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-m);
+            color: var(--secondary-color);
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .course-hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .month-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .overview-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }

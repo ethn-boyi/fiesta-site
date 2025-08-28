@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dressmaking Skills Course - Fiesta Trainers & Caterers</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="dressmaking-skills.css">
+    </head>
+    <body>
+        <!-- Header -->
+    <nav>
+      <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+      <label class="logo">Fiesta Trainers & Caterers</label>
+      <ul>
+          <li class="hideonMobile"><a href="index.html">home</a></li>
+          
+          <!-- About dropdown -->
+          <li class="hideonMobile dropdown">
+              <a  href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a class="active" href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+                  <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+                  <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+                  <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+                  <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="manage.html">management</a></li>
+          
+          <!-- Courses dropdown -->
+          <li class="hideonMobile dropdown">
+              <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+                  <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+                  <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+                  <a class="active" href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+          <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+      </ul>
+
+      <!-- Sidebar for mobile -->
+      <ul class="sidebar">
+          <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+          <li><a href="index.html">home</a></li>
+
+          <!-- About dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="about.html">about</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a  href="examination.html">Examination Information</a></li>
+                  <li><a href="admissions.html">Admission Requirements</a></li>
+                  <li><a href="fees.html">Fees Structure 2024/2025</a></li>
+                  <li><a href="policies.html">School Policies</a></li>
+                  <li><a href="news.html">News & Achievements</a></li>
+              </ul>
+          </li>
+
+          <li><a href="manage.html">management</a></li>
+
+          <!-- Courses dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="courses.html">courses</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a href="culinary-hospitality.html">Culinary & Hospitality</a></li>
+                  <li><a href="beauty-personal-care.html">Beauty & Personal Care</a></li>
+                  <li><a href="digital-business.html">Digital & Business Skills</a></li>
+                  <li><a class="active" href="dressmaking-skills.html">Dressmaking & Practical Skills</a></li>
+              </ul>
+          </li>
+
+          <li><a href="gallery.html">gallery</a></li>
+      </ul>
+    </nav>
+
+
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Dressmaking & Fashion Craft</h1>
+                <p class="hero-subtitle">Master the Art of Garment Construction & Fashion Design</p>
+                <div class="hero-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Professional Certificate in Dressmaking</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Overview -->
+        <section class="course-overview">
+            <div class="overview-grid">
+                <div class="overview-stats">
+                    <div class="stats-header">
+                        <i class="fas fa-tshirt"></i>
+                        <h3>Course Details</h3>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Duration</div>
+                        <div class="stat-value">6 Months</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Total Weeks</div>
+                        <div class="stat-value">24 Weeks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Study Mode</div>
+                        <div class="stat-value">Full/Part Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Target Group</div>
+                        <div class="stat-value">Youth & Adults</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Certification</div>
+                        <div class="stat-value">Fashion Craft Certificate</div>
+                    </div>
+                </div>
+                <div class="overview-content">
+                    <h2>Professional Dressmaking Course</h2>
+                    <p>Our comprehensive 6-month Dressmaking and Fashion Craft course is designed to transform your passion for fashion into professional expertise. This hands-on program combines traditional tailoring techniques with modern design principles, ensuring you graduate as a skilled dressmaker ready to launch your career in the fashion industry.</p>
+                    <p>Whether you aspire to start your own tailoring business, work in fashion houses, or simply master the art of creating beautiful garments, this course provides the perfect foundation for success in the dynamic world of fashion and garment construction.</p>
+                    
+                    <div class="course-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-cut"></i>
+                            <h4>Pattern Drafting</h4>
+                            <p>Master the art of creating custom patterns</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-sewing-machine"></i>
+                            <h4>Machine Operation</h4>
+                            <p>Expert training on industrial machines</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-palette"></i>
+                            <h4>Design Skills</h4>
+                            <p>Fashion design and styling techniques</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-store"></i>
+                            <h4>Business Training</h4>
+                            <p>Entrepreneurship and client management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="curriculum-section">
+            <div class="section-title">
+                <h2>6-Month Curriculum Journey</h2>
+                <p>From basics to professional mastery in fashion craft</p>
+            </div>
+
+            <div class="months-container">
+                <!-- Month 1 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">1</div>
+                        <div class="month-info">
+                            <h3>Introduction to Dressmaking</h3>
+                            <p>Foundation skills and professional standards</p>
+                        </div>
+                    </div>
+                    <div class="month-content">
+                        <div class="month-topics">
+                            <div class="topic-section">
+                                <h4><i class="fas fa-handshake"></i> Orientation & Safety</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Workshop hygiene and safety procedures</div>
+                                    <div class="topic-item">Professional conduct and client care</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-tools"></i> Tools & Equipment</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Identification, use, and maintenance of sewing tools</div>
+                                    <div class="topic-item">Machine types and threading techniques</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-fabric"></i> Fabric Knowledge</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Types of fabrics and their uses</div>
+                                    <div class="topic-item">Grain lines, textures, and handling</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 2 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">2</div>
+                        <div class="month-info">
+                            <h3>Basic Sewing Techniques</h3>
+                            <p>Essential hand and machine sewing skills</p>
+                        </div>
+                    </div>
+                    <div class="month-content">
+                        <div class="month-topics">
+                            <div class="topic-section">
+                                <h4><i class="fas fa-hand-paper"></i> Hand Sewing Skills</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Stitch types: running, backstitch, hemming</div>
+                                    <div class="topic-item">Seam finishes and edge treatments</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-cog"></i> Machine Sewing Skills</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Straight stitching, zigzag, and overlocking</div>
+                                    <div class="topic-item">Troubleshooting machine issues</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-tshirt"></i> Basic Garment Construction</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Making simple items: aprons, skirts, pillowcases</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 3 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">3</div>
+                        <div class="month-info">
+                            <h3>Pattern Drafting & Cutting</h3>
+                            <p>Creating custom patterns and precision cutting</p>
+                        </div>
+                    </div>
+                    <div class="month-content">
+                        <div class="month-topics">
+                            <div class="topic-section">
+                                <h4><i class="fas fa-ruler"></i> Measurements & Sizing</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Taking accurate body measurements</div>
+                                    <div class="topic-item">Understanding size charts and fit</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-drafting-compass"></i> Pattern Drafting</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Drafting basic bodice, skirt, and sleeve patterns</div>
+                                    <div class="topic-item">Use of pattern paper and tracing tools</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-cut"></i> Fabric Cutting Techniques</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Laying out patterns and cutting accurately</div>
+                                    <div class="topic-item">Minimizing waste and maximizing efficiency</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 4 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">4</div>
+                        <div class="month-info">
+                            <h3>Garment Assembly & Finishing</h3>
+                            <p>Professional construction and finishing techniques</p>
+                        </div>
+                    </div>
+                    <div class="month-content">
+                        <div class="month-topics">
+                            <div class="topic-section">
+                                <h4><i class="fas fa-puzzle-piece"></i> Joining Garment Pieces</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Assembling bodices, sleeves, collars, and skirts</div>
+                                    <div class="topic-item">Seam alignment and pressing techniques</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-link"></i> Zippers, Buttons & Fasteners</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Installation of closures and decorative finishes</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-magic"></i> Hemming & Final Touches</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Clean finishing for professional look</div>
+                                    <div class="topic-item">Ironing and presentation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 5 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">5</div>
+                        <div class="month-info">
+                            <h3>Design, Styling & Customization</h3>
+                            <p>Creative design and advanced customization</p>
+                        </div>
+                    </div>
+                    <div class="month-content">
+                        <div class="month-topics">
+                            <div class="topic-section">
+                                <h4><i class="fas fa-palette"></i> Fashion Design Basics</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Color theory, style lines, and garment aesthetics</div>
+                                    <div class="topic-item">Sketching and mood boards</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-gem"></i> Customization Techniques</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Embellishments: beads, lace, appliqué</div>
+                                    <div class="topic-item">Alterations and client-specific adjustments</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-crown"></i> Cultural & Event Wear</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Traditional attire, bridal wear, and uniforms</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 6 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">6</div>
+                        <div class="month-info">
+                            <h3>Entrepreneurship & Final Assessment</h3>
+                            <p>Business skills and professional certification</p>
+                        </div>
+                    </div>
+                    <div class="month-content">
+                        <div class="month-topics">
+                            <div class="topic-section">
+                                <h4><i class="fas fa-business-time"></i> Business Skills for Tailors</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Pricing, budgeting, and customer service</div>
+                                    <div class="topic-item">Marketing and branding for small businesses</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-folder-open"></i> Portfolio Development</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Documenting completed garments</div>
+                                    <div class="topic-item">Preparing for job interviews or self-employment</div>
+                                </div>
+                            </div>
+                            <div class="topic-section">
+                                <h4><i class="fas fa-graduation-cap"></i> Final Practical & Theory Exams</h4>
+                                <div class="topic-list">
+                                    <div class="topic-item">Garment showcase and written test</div>
+                                    <div class="topic-item">Certificate issuance and graduation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Start Your Fashion Journey?</h2>
+                <p>Join our comprehensive dressmaking program and transform your creative passion into professional expertise. Our experienced instructors will guide you through every step of becoming a skilled fashion craftsperson.</p>
+                <div class="cta-buttons">
+                    <a href="https://form.jotform.com/252374240578561" class="cta-btn primary">Apply Now</a>
+                    <a href="about.html" class="cta-btn secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <h3>office</h3>
+                    <p>Nairobi</p>
+                    <p>Kangudo Road, Chokaa</p>
+                    <p>Shujaa</p>
+                    <p class="email-id">fiestatrainers@gmail.com</p>
+                    <h4>+254743670728</h4>
+                </div>
+                <div class="col">
+                    <h3>links</h3>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="manage.html">management</a></li>
+                        <li><a href="courses.html">courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr><br>
+            <div class="terms">
+                <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+            </div>
+        </footer>
+
+        <script>
+            function showSidebar() {
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'flex';
+            }
+
+            function hideSidebar() {
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'none';
+            }
+
+            // Add smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(30px)';
+                        entry.target.style.transition = 'all 0.8s ease';
+                        
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 100);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all month cards
+            document.querySelectorAll('.month-card').forEach(card => {
+                observer.observe(card);
+            });
+
+            // Add hover effects for interactive elements
+            document.querySelectorAll('.highlight-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelector('.page-hero');
+                if (parallax) {
+                    const speed = scrolled * 0.5;
+                    parallax.style.transform = `translateY(${speed}px)`;
+                }
+            });
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

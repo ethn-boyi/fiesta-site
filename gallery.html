@@ -12,41 +12,80 @@
     </head>
     <body>
         <!-- Header -->
-        <nav>
-            <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
-            <label class="logo">Fiesta Trainers & Caterers</label>
-            <ul>
-                <li class="hideonMobile"><a href="index.html">home</a></li>
-                
-                <!-- About dropdown -->
-                <li class="hideonMobile dropdown">
-                    <a href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                    <div class="dropdown-content">
-                        <a href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
-                        <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
-                        <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
-                        <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
-                        <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
-                    </div>
-                </li>
-                
-                <li class="hideonMobile"><a href="manage.html">management</a></li>
-                
-                <!-- Courses dropdown -->
-                <li class="hideonMobile dropdown">
-                    <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                    <div class="dropdown-content">
-                        <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
-                        <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
-                        <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
-                        <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
-                    </div>
-                </li>
-                
-                <li class="hideonMobile"><a class="active" href="gallery.html">gallery</a></li>
-                <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
-            </ul>
+       <nav>
+          <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+          <label class="logo">Fiesta Trainers & Caterers</label>
+          <ul>
+              <li class="hideonMobile"><a href="index.html">home</a></li>
+              
+              <!-- About dropdown -->
+              <li class="hideonMobile dropdown">
+                  <a  href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                  <div class="dropdown-content">
+                      <a href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+                      <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+                      <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+                      <a  href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+                      <a  href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+                  </div>
+              </li>
+              
+              <li class="hideonMobile"><a href="manage.html">management</a></li>
+              
+              <!-- Courses dropdown -->
+              <li class="hideonMobile dropdown">
+                  <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                  <div class="dropdown-content">
+                      <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+                      <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+                      <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+                      <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+                  </div>
+              </li>
+              
+              <li class="hideonMobile"><a class="active"href="gallery.html">gallery</a></li>
+              <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+          </ul>
 
+          <!-- Sidebar for mobile -->
+          <ul class="sidebar">
+              <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+              <li><a href="index.html">home</a></li>
+
+              <!-- About dropdown (mobile) -->
+              <li class="sidebar-dropdown">
+                  <div class="sidebar-link">
+                      <a href="about.html">about</a>
+                      <span class="arrow">▶</span>
+                  </div>
+                  <ul class="sidebar-submenu">
+                      <li><a href="examination.html">Examination Information</a></li>
+                      <li><a href="admissions.html">Admission Requirements</a></li>
+                      <li><a href="fees.html">Fees Structure 2024/2025</a></li>
+                      <li><a href="policies.html">School Policies</a></li>
+                      <li><a href="news.html">News & Achievements</a></li>
+                  </ul>
+              </li>
+
+              <li><a href="manage.html">management</a></li>
+
+              <!-- Courses dropdown (mobile) -->
+              <li class="sidebar-dropdown">
+                  <div class="sidebar-link">
+                      <a href="courses.html">courses</a>
+                      <span class="arrow">▶</span>
+                  </div>
+                  <ul class="sidebar-submenu">
+                      <li><a href="culinary-hospitality.html">Culinary & Hospitality</a></li>
+                      <li><a href="beauty-personal-care.html">Beauty & Personal Care</a></li>
+                      <li><a href="digital-business.html">Digital & Business Skills</a></li>
+                      <li><a href="dressmaking-skills.html">Dressmaking & Practical Skills</a></li>
+                  </ul>
+              </li>
+
+              <li><a class="active" href="gallery.html">gallery</a></li>
+          </ul>
+        </nav>
     <!-- Sidebar -->
     <ul class="sidebar">
         <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>

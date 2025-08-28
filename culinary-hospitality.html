@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary & Hospitality | Fiesta Trainers & Caterers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="culinary-hospitality.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for course outlines */
+        .course-outline {
+            background: #fff;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .course-header h3 {
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+        }
+
+        .course-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        .course-details div {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .month-container {
+            padding: 0 25px 25px 25px;
+        }
+
+        .month-item {
+            margin: 20px 0;
+            border-left: 4px solid #e67e22;
+            padding-left: 20px;
+        }
+
+        .month-title {
+            color: #d35400;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .month-title::before {
+            content: '📅';
+            margin-right: 8px;
+        }
+
+        .month-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .month-content li {
+            margin: 8px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+
+        .month-content li:last-child {
+            border-bottom: none;
+        }
+
+        .month-content li::before {
+            content: '•';
+            color: #e67e22;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .course-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-header {
+                padding: 20px 15px;
+            }
+            
+            .course-header h3 {
+                font-size: 1.4rem;
+            }
+            
+            .month-container {
+                padding: 0 15px 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav>
+      <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+      <label class="logo">Fiesta Trainers & Caterers</label>
+      <ul>
+          <li class="hideonMobile"><a href="index.html">home</a></li>
+          
+          <!-- About dropdown -->
+          <li class="hideonMobile dropdown">
+              <a  href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a class="active" href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+                  <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+                  <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+                  <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+                  <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="manage.html">management</a></li>
+          
+          <!-- Courses dropdown -->
+          <li class="hideonMobile dropdown">
+              <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a class="active" href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+                  <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+                  <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+                  <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+          <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+      </ul>
+
+      <!-- Sidebar for mobile -->
+      <ul class="sidebar">
+          <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+          <li><a href="index.html">home</a></li>
+
+          <!-- About dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="about.html">about</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a  href="examination.html">Examination Information</a></li>
+                  <li><a href="admissions.html">Admission Requirements</a></li>
+                  <li><a href="fees.html">Fees Structure 2024/2025</a></li>
+                  <li><a href="policies.html">School Policies</a></li>
+                  <li><a href="news.html">News & Achievements</a></li>
+              </ul>
+          </li>
+
+          <li><a href="manage.html">management</a></li>
+
+          <!-- Courses dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="courses.html">courses</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a class="active" href="culinary-hospitality.html">Culinary & Hospitality</a></li>
+                  <li><a href="beauty-personal-care.html">Beauty & Personal Care</a></li>
+                  <li><a href="digital-business.html">Digital & Business Skills</a></li>
+                  <li><a href="dressmaking-skills.html">Dressmaking & Practical Skills</a></li>
+              </ul>
+          </li>
+
+          <li><a href="gallery.html">gallery</a></li>
+      </ul>
+    </nav>
+<!-- Page Hero -->
+<section class="hero culinary-hero">
+    <h1>Culinary & Hospitality Courses</h1>
+    <p>Learn professional catering, baking, and pastry skills from Fiesta Trainers & Caterers</p>
+</section>
+
+<!-- Courses Section -->
+<section class="courses-section">
+    <h2>Professional Culinary Training Programs</h2>
+
+    <!-- Catering Course -->
+    <div class="course-outline">
+        <div class="course-header">
+            <h3>🍽️ FIESTA TRAINERS CATERING COURSE OUTLINE</h3>
+            <div class="course-details">
+                <div><strong>📅 Duration:</strong> 6 Months (24 Weeks)</div>
+                <div><strong>📚 Mode:</strong> Full-time / Part-time</div>
+                <div><strong>🎯 Target Group:</strong> Youth, adults, and aspiring caterers</div>
+                <div><strong>🎓 Outcome:</strong> Certificate in Catering and Hospitality Operations</div>
+            </div>
+        </div>
+        
+        <div class="month-container">
+            <div class="month-item">
+                <div class="month-title">Month 1: Introduction to Catering & Kitchen Basics</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Orientation & Professional Conduct</li>
+                        <li>Personal hygiene, grooming, and kitchen etiquette</li>
+                        <li>Roles and responsibilities in catering</li>
+                        <li>Kitchen Tools & Equipment</li>
+                        <li>Identification, use, and maintenance</li>
+                        <li>Safety procedures and workspace organization</li>
+                        <li>Basic Food Preparation</li>
+                        <li>Cutting techniques, boiling, steaming, and sautéing</li>
+                        <li>Handling raw ingredients and mise en place</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 2: Nutrition, Menu Planning & Local Dishes</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Basic Nutrition & Balanced Diets</li>
+                        <li>Food groups and dietary needs</li>
+                        <li>Planning meals for different populations</li>
+                        <li>Menu Planning & Costing</li>
+                        <li>Creating menus for events and institutions</li>
+                        <li>Budgeting and portion control</li>
+                        <li>Preparation of Kenyan Dishes</li>
+                        <li>Ugali, sukuma wiki, chapati, githeri, pilau</li>
+                        <li>Cultural presentation and flavor balancing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 3: Baking & Pastry Techniques</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Introduction to Baking</li>
+                        <li>Measuring, mixing, and oven use</li>
+                        <li>Pastry & Desserts</li>
+                        <li>Cakes, cookies, mandazi, samosas</li>
+                        <li>Decoration and presentation</li>
+                        <li>Bread Making</li>
+                        <li>Yeast handling, kneading, and proofing</li>
+                        <li>Local and international bread varieties</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 4: International Cuisine & Event Catering</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Continental Dishes</li>
+                        <li>Rice dishes, pasta, stews, and salads</li>
+                        <li>Fusion cooking and plating styles</li>
+                        <li>Event Catering Skills</li>
+                        <li>Buffet setup, portioning, and timing</li>
+                        <li>Working under pressure and teamwork</li>
+                        <li>Food Presentation & Garnishing</li>
+                        <li>Visual appeal and customer satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 5: Food Safety, Hygiene & Service</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Food Safety Standards</li>
+                        <li>HACCP principles and contamination prevention</li>
+                        <li>Kitchen Hygiene & Waste Management</li>
+                        <li>Cleaning schedules and disposal methods</li>
+                        <li>Customer Service & Table Setting</li>
+                        <li>Serving etiquette, table layouts, and guest interaction</li>
+                        <li>Catering for Special Diets</li>
+                        <li>Vegetarian, diabetic, gluten-free options</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 6: Entrepreneurship & Final Assessment</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Starting a Catering Business</li>
+                        <li>Business registration, branding, and marketing</li>
+                        <li>Financial Literacy for Caterers</li>
+                        <li>Pricing, budgeting, and record keeping</li>
+                        <li>Portfolio Development</li>
+                        <li>Documenting dishes and service setups</li>
+                        <li>Final Practical & Theory Exams</li>
+                        <li>Event simulation and written test</li>
+                        <li>Graduation and certificate issuance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pastry & Baking Course -->
+    <div class="course-outline">
+        <div class="course-header">
+            <h3>🧁 FIESTA TRAINERS PASTRY & BAKING COURSE OUTLINE</h3>
+            <div class="course-details">
+                <div><strong>📅 Duration:</strong> 6 Months (24 Weeks)</div>
+                <div><strong>📚 Mode:</strong> Full-time / Part-time</div>
+                <div><strong>🎯 Target Group:</strong> Youth, adults, and aspiring bakers</div>
+                <div><strong>🎓 Outcome:</strong> Certificate in Pastry and Baking Arts</div>
+            </div>
+        </div>
+        
+        <div class="month-container">
+            <div class="month-item">
+                <div class="month-title">Month 1: Introduction to Baking & Kitchen Safety</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Orientation & Professional Conduct</li>
+                        <li>Hygiene, grooming, and kitchen etiquette</li>
+                        <li>Safety procedures and teamwork</li>
+                        <li>Tools & Equipment</li>
+                        <li>Identification, use, and maintenance of baking tools</li>
+                        <li>Oven types and temperature control</li>
+                        <li>Basic Baking Principles</li>
+                        <li>Measuring ingredients, mixing methods, and baking science</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 2: Bread Making & Yeast Products</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Types of Bread</li>
+                        <li>White, brown, wholemeal, and enriched breads</li>
+                        <li>Yeast Handling & Fermentation</li>
+                        <li>Proofing, kneading, and shaping techniques</li>
+                        <li>Local & International Varieties</li>
+                        <li>Mandazi, chapati, buns, rolls, and flatbreads</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 3: Cakes, Muffins & Cupcakes</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Cake Mixing Methods</li>
+                        <li>Creaming, whisking, and all-in-one techniques</li>
+                        <li>Types of Cakes</li>
+                        <li>Sponge, fruit, marble, and chocolate cakes</li>
+                        <li>Decorating & Presentation</li>
+                        <li>Icing, piping, layering, and garnishing</li>
+                        <li>Cupcakes & Muffins</li>
+                        <li>Flavor variations and packaging</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 4: Pastries & Dough-Based Products</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Shortcrust & Puff Pastry</li>
+                        <li>Techniques for flakiness and layering</li>
+                        <li>Savory & Sweet Pastries</li>
+                        <li>Samosas, pies, tarts, and turnovers</li>
+                        <li>Dough Handling & Storage</li>
+                        <li>Resting, chilling, and baking precision</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 5: Advanced Baking & Product Development</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Specialty Bakes</li>
+                        <li>Swiss rolls, éclairs, doughnuts, and croissants</li>
+                        <li>Recipe Customization</li>
+                        <li>Flavor pairing, dietary adjustments (gluten-free, low sugar)</li>
+                        <li>Packaging & Branding</li>
+                        <li>Labeling, presentation, and shelf-life considerations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 6: Entrepreneurship & Final Assessment</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Starting a Baking Business</li>
+                        <li>Business registration, pricing, and marketing</li>
+                        <li>Digital Tools for Bakers</li>
+                        <li>Social media promotion, mobile money integration</li>
+                        <li>Portfolio Development</li>
+                        <li>Documenting baked products and showcasing skills</li>
+                        <li>Final Exams & Certification</li>
+                        <li>Practical baking test and written assessment</li>
+                        <li>Graduation and product exhibition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cake Making & Decoration Course -->
+    <div class="course-outline">
+        <div class="course-header">
+            <h3>🎂 FIESTA TRAINERS CAKE MAKING & DECORATION COURSE OUTLINE</h3>
+            <div class="course-details">
+                <div><strong>📅 Duration:</strong> 6 Months (24 Weeks)</div>
+                <div><strong>📚 Mode:</strong> Full-time / Part-time</div>
+                <div><strong>🎯 Target Group:</strong> Youth, adults, and aspiring bakers</div>
+                <div><strong>🎓 Outcome:</strong> Certificate in Cake Making and Decoration</div>
+            </div>
+        </div>
+        
+        <div class="month-container">
+            <div class="month-item">
+                <div class="month-title">Month 1: Introduction to Cake Baking</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Orientation & Kitchen Safety</li>
+                        <li>Hygiene, grooming, and professional conduct</li>
+                        <li>Equipment identification and safety procedures</li>
+                        <li>Basic Baking Principles</li>
+                        <li>Measuring ingredients, mixing methods, and oven use</li>
+                        <li>Simple Cakes</li>
+                        <li>Vanilla, chocolate, marble, and fruit cakes</li>
+                        <li>Understanding flour types, leavening agents, and baking temperatures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 2: Cake Types & Flavor Development</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Specialty Cakes</li>
+                        <li>Sponge, butter, chiffon, and pound cakes</li>
+                        <li>Flavor Pairing & Enhancements</li>
+                        <li>Use of extracts, spices, fruits, and fillings</li>
+                        <li>Moisture & Texture Control</li>
+                        <li>Techniques for soft, fluffy, and rich cakes</li>
+                        <li>Troubleshooting Baking Errors</li>
+                        <li>Common faults and how to correct them</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 3: Introduction to Cake Decoration</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Basic Icing Techniques</li>
+                        <li>Buttercream, whipped cream, and glaze application</li>
+                        <li>Piping Skills</li>
+                        <li>Borders, rosettes, stars, and writing</li>
+                        <li>Color Mixing & Presentation</li>
+                        <li>Food-safe coloring and visual appeal</li>
+                        <li>Simple Celebration Cakes</li>
+                        <li>Birthday and anniversary designs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 4: Advanced Decoration Techniques</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Fondant & Gum Paste Work</li>
+                        <li>Covering cakes, shaping flowers, and figures</li>
+                        <li>Tiered Cake Assembly</li>
+                        <li>Stacking, doweling, and stability techniques</li>
+                        <li>Theme-Based Cakes</li>
+                        <li>Cultural, seasonal, and custom designs</li>
+                        <li>Edible Art & Detailing</li>
+                        <li>Painting, stenciling, and texture effects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 5: Product Development & Client Service</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Cake Packaging & Display</li>
+                        <li>Boxes, boards, and transport tips</li>
+                        <li>Client Consultation & Custom Orders</li>
+                        <li>Pricing, portioning, and design briefs</li>
+                        <li>Portfolio Building</li>
+                        <li>Photographing and documenting finished cakes</li>
+                        <li>Quality Control & Consistency</li>
+                        <li>Batch testing and feedback integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="month-item">
+                <div class="month-title">Month 6: Entrepreneurship & Final Assessment</div>
+                <div class="month-content">
+                    <ul>
+                        <li>Starting a Cake Business</li>
+                        <li>Business registration, branding, and marketing</li>
+                        <li>Digital Promotion & Sales</li>
+                        <li>Social media, mobile money, and customer engagement</li>
+                        <li>Final Practical & Theory Exams</li>
+                        <li>Bake and decorate a themed cake</li>
+                        <li>Written test on baking science and business skills</li>
+                        <li>Graduation & Certificate Issuance</li>
+                        <li>Showcase event and learner recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Fiesta Trainers & Caterers. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

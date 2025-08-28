@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beauty & Personal Care - Fiesta Trainers & Caterers</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="beauty-personal-care.css">
+    </head>
+    <body>
+   <!-- Header -->
+    <nav>
+      <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+      <label class="logo">Fiesta Trainers & Caterers</label>
+      <ul>
+          <li class="hideonMobile"><a href="index.html">home</a></li>
+          
+          <!-- About dropdown -->
+          <li class="hideonMobile dropdown">
+              <a  href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a class="active" href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+                  <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+                  <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+                  <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+                  <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="manage.html">management</a></li>
+          
+          <!-- Courses dropdown -->
+          <li class="hideonMobile dropdown">
+              <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a  href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+                  <a class="active" href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+                  <a href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+                  <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+          <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+      </ul>
+
+      <!-- Sidebar for mobile -->
+      <ul class="sidebar">
+          <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+          <li><a href="index.html">home</a></li>
+
+          <!-- About dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="about.html">about</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a  href="examination.html">Examination Information</a></li>
+                  <li><a href="admissions.html">Admission Requirements</a></li>
+                  <li><a href="fees.html">Fees Structure 2024/2025</a></li>
+                  <li><a href="policies.html">School Policies</a></li>
+                  <li><a href="news.html">News & Achievements</a></li>
+              </ul>
+          </li>
+
+          <li><a href="manage.html">management</a></li>
+
+          <!-- Courses dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="courses.html">courses</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a href="culinary-hospitality.html">Culinary & Hospitality</a></li>
+                  <li><a class="active" href="beauty-personal-care.html">Beauty & Personal Care</a></li>
+                  <li><a href="digital-business.html">Digital & Business Skills</a></li>
+                  <li><a href="dressmaking-skills.html">Dressmaking & Practical Skills</a></li>
+              </ul>
+          </li>
+
+          <li><a href="gallery.html">gallery</a></li>
+      </ul>
+    </nav>
+
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Beauty & Personal Care</h1>
+                <p class="hero-subtitle">Transform Lives Through Professional Beauty Therapy Training</p>
+            </div>
+        </section>
+
+        <!-- Course Overview -->
+        <section class="course-overview">
+            <div class="overview-grid">
+                <div class="overview-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Duration</div>
+                        <div class="stat-value">6 Months</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Total Weeks</div>
+                        <div class="stat-value">24 Weeks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Study Mode</div>
+                        <div class="stat-value">Full/Part Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Certification</div>
+                        <div class="stat-value">Professional Certificate</div>
+                    </div>
+                </div>
+                <div class="overview-content">
+                    <h2>Professional Beauty Therapy Course</h2>
+                    <p>Our comprehensive 6-month Beauty Therapy course is designed to equip you with the essential skills and knowledge needed to excel in the beauty and wellness industry. This hands-on program combines theoretical understanding with practical experience, ensuring you graduate as a confident and competent beauty professional.</p>
+                    <p>Whether you're looking to start your own salon, work in established beauty centers, or advance your current career, this course provides the foundation for success in the rapidly growing beauty industry.</p>
+                    
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-spa"></i>
+                            <h4>Comprehensive Training</h4>
+                            <p>Complete beauty therapy curriculum</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Professional Certification</h4>
+                            <p>Industry-recognized qualification</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Hands-On Experience</h4>
+                            <p>Practical training with real clients</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-business-time"></i>
+                            <h4>Business Skills</h4>
+                            <p>Entrepreneurship and salon management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="curriculum-section">
+            <div class="section-title">
+                <h2>6-Month Curriculum Breakdown</h2>
+                <p>A comprehensive journey from basics to professional mastery</p>
+            </div>
+
+            <div class="curriculum-timeline">
+                <!-- Month 1 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">1</div>
+                        <div class="month-info">
+                            <h3>Introduction & Personal Grooming</h3>
+                            <p>Foundation skills and professional standards</p>
+                        </div>
+                    </div>
+                    <div class="month-topics">
+                        <div class="topic-group">
+                            <h4><i class="fas fa-handshake"></i> Orientation & Professional Conduct</h4>
+                            <ul>
+                                <li>Salon hygiene, ethics, and client care</li>
+                                <li>Personal presentation and grooming standards</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-microscope"></i> Skin Anatomy & Physiology</h4>
+                            <ul>
+                                <li>Layers of the skin and their functions</li>
+                                <li>Common skin types and conditions</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-leaf"></i> Basic Facial Treatments</h4>
+                            <ul>
+                                <li>Cleansing, toning, exfoliation, and moisturizing</li>
+                                <li>Product selection and application techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 2 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">2</div>
+                        <div class="month-info">
+                            <h3>Skin Care & Facial Therapy</h3>
+                            <p>Advanced facial treatments and massage techniques</p>
+                        </div>
+                    </div>
+                    <div class="month-topics">
+                        <div class="topic-group">
+                            <h4><i class="fas fa-magic"></i> Advanced Facial Techniques</h4>
+                            <ul>
+                                <li>Steam therapy, extraction, and mask application</li>
+                                <li>Anti-aging and acne treatments</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-hands"></i> Massage Techniques</h4>
+                            <ul>
+                                <li>Facial massage movements and benefits</li>
+                                <li>Relaxation and lymphatic drainage</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-clipboard-list"></i> Client Consultation & Record Keeping</h4>
+                            <ul>
+                                <li>Skin analysis and treatment planning</li>
+                                <li>Documentation and follow-up care</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 3 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">3</div>
+                        <div class="month-info">
+                            <h3>Nail Care & Hand/Foot Therapy</h3>
+                            <p>Comprehensive manicure, pedicure, and nail artistry</p>
+                        </div>
+                    </div>
+                    <div class="month-topics">
+                        <div class="topic-group">
+                            <h4><i class="fas fa-hand-paper"></i> Manicure & Pedicure Basics</h4>
+                            <ul>
+                                <li>Nail shaping, cuticle care, buffing, and polishing</li>
+                                <li>Hygiene and safety procedures</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-paint-brush"></i> Nail Art & Enhancements</h4>
+                            <ul>
+                                <li>Decorative techniques and trends</li>
+                                <li>Use of gels, acrylics, and tips</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-spa"></i> Hand & Foot Massage</h4>
+                            <ul>
+                                <li>Pressure points and relaxation techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 4 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">4</div>
+                        <div class="month-info">
+                            <h3>Hair Removal & Eye Treatments</h3>
+                            <p>Professional hair removal and eye enhancement services</p>
+                        </div>
+                    </div>
+                    <div class="month-topics">
+                        <div class="topic-group">
+                            <h4><i class="fas fa-fire"></i> Waxing Techniques</h4>
+                            <ul>
+                                <li>Hot and cold wax application</li>
+                                <li>Facial and body hair removal</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-cut"></i> Threading & Tweezing</h4>
+                            <ul>
+                                <li>Eyebrow shaping and upper lip threading</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-eye"></i> Eye Treatments</h4>
+                            <ul>
+                                <li>Eyelash tinting, eyebrow grooming</li>
+                                <li>Application of false lashes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 5 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">5</div>
+                        <div class="month-info">
+                            <h3>Makeup Application & Bridal Styling</h3>
+                            <p>Professional makeup artistry for all occasions</p>
+                        </div>
+                    </div>
+                    <div class="month-topics">
+                        <div class="topic-group">
+                            <h4><i class="fas fa-palette"></i> Day, Evening & Bridal Makeup</h4>
+                            <ul>
+                                <li>Foundation matching, contouring, and highlighting</li>
+                                <li>Eye shadow blending and lip techniques</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-users"></i> Makeup for Different Skin Tones</h4>
+                            <ul>
+                                <li>Cultural sensitivity and client preferences</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-ring"></i> Special Occasion Styling</h4>
+                            <ul>
+                                <li>Bridal consultations and trial sessions</li>
+                                <li>Hair and makeup coordination</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 6 -->
+                <div class="month-card">
+                    <div class="month-header">
+                        <div class="month-number">6</div>
+                        <div class="month-info">
+                            <h3>Salon Management & Entrepreneurship</h3>
+                            <p>Business skills and professional certification</p>
+                        </div>
+                    </div>
+                    <div class="month-topics">
+                        <div class="topic-group">
+                            <h4><i class="fas fa-store"></i> Salon Setup & Operations</h4>
+                            <ul>
+                                <li>Equipment, layout, and workflow</li>
+                                <li>Inventory and supplier management</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-bullhorn"></i> Customer Service & Marketing</h4>
+                            <ul>
+                                <li>Branding, social media, and client retention</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-chart-line"></i> Business Planning & Financial Literacy</h4>
+                            <ul>
+                                <li>Pricing, budgeting, and record keeping</li>
+                            </ul>
+                        </div>
+                        <div class="topic-group">
+                            <h4><i class="fas fa-graduation-cap"></i> Final Assessment & Certification</h4>
+                            <ul>
+                                <li>Practical exam and theory test</li>
+                                <li>Portfolio presentation and graduation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Ready to Start Your Beauty Career?</h2>
+            <p>Join hundreds of successful graduates who have transformed their passion for beauty into thriving careers. Our comprehensive training program provides everything you need to succeed in the beauty industry.</p>
+            <div class="cta-buttons">
+                <a href="https://form.jotform.com/252374240578561" class="cta-btn primary">Apply Now</a>
+                <a href="about.html" class="cta-btn secondary">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <h3>office</h3>
+                    <p>Nairobi</p>
+                    <p>Kangudo Road, Chokaa</p>
+                    <p>Shujaa</p>
+                    <p class="email-id">fiestatrainers@gmail.com</p>
+                    <h4>+254743670728</h4>
+                </div>
+                <div class="col">
+                    <h3>links</h3>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="manage.html">management</a></li>
+                        <li><a href="courses.html">courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr><br>
+            <div class="terms">
+                <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+            </div>
+        </footer>
+
+        <script>
+            function showSidebar() {
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'flex';
+            }
+
+            function hideSidebar() {
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'none';
+            }
+
+            // Add smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = '0.2s';
+                        entry.target.style.animationFillMode = 'both';
+                        entry.target.style.animationName = 'fadeInUp';
+                        entry.target.style.animationDuration = '0.8s';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.month-card').forEach(card => {
+                observer.observe(card);
+            });
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

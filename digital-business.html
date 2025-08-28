@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital & Business Skills - Fiesta Trainers & Caterers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="digital-business.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav>
+      <img src="https://raw.githubusercontent.com/ethn-boyi/fiesta-site/main/images/fiestalogo.png" class="fiesta">
+      <label class="logo">Fiesta Trainers & Caterers</label>
+      <ul>
+          <li class="hideonMobile"><a href="index.html">home</a></li>
+          
+          <!-- About dropdown -->
+          <li class="hideonMobile dropdown">
+              <a  href="about.html">about <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a class="active" href="examination.html"><i class="fas fa-graduation-cap"></i> Examination Information</a>
+                  <a href="admissions.html"><i class="fas fa-user-plus"></i> Admission Requirements</a>
+                  <a href="fees.html"><i class="fas fa-money-bill-wave"></i> Fees Structure 2024/2025</a>
+                  <a href="policies.html"><i class="fas fa-book"></i> School Policies</a>
+                  <a href="news.html"><i class="fas fa-trophy"></i> News & Achievements</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="manage.html">management</a></li>
+          
+          <!-- Courses dropdown -->
+          <li class="hideonMobile dropdown">
+              <a href="courses.html">courses <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-content">
+                  <a href="culinary-hospitality.html"><i class="fas fa-utensils"></i> Culinary & Hospitality</a>
+                  <a href="beauty-personal-care.html"><i class="fas fa-cut"></i> Beauty & Personal Care</a>
+                  <a class="active" href="digital-business.html"><i class="fas fa-laptop"></i> Digital & Business Skills</a>
+                  <a href="dressmaking-skills.html"><i class="fas fa-tshirt"></i> Dressmaking & Practical Skills</a>
+              </div>
+          </li>
+          
+          <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
+          <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+      </ul>
+
+      <!-- Sidebar for mobile -->
+      <ul class="sidebar">
+          <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+          <li><a href="index.html">home</a></li>
+
+          <!-- About dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="about.html">about</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a  href="examination.html">Examination Information</a></li>
+                  <li><a href="admissions.html">Admission Requirements</a></li>
+                  <li><a href="fees.html">Fees Structure 2024/2025</a></li>
+                  <li><a href="policies.html">School Policies</a></li>
+                  <li><a href="news.html">News & Achievements</a></li>
+              </ul>
+          </li>
+
+          <li><a href="manage.html">management</a></li>
+
+          <!-- Courses dropdown (mobile) -->
+          <li class="sidebar-dropdown">
+              <div class="sidebar-link">
+                  <a href="courses.html">courses</a>
+                  <span class="arrow">▶</span>
+              </div>
+              <ul class="sidebar-submenu">
+                  <li><a href="culinary-hospitality.html">Culinary & Hospitality</a></li>
+                  <li><a href="beauty-personal-care.html">Beauty & Personal Care</a></li>
+                  <li><a class="active" href="digital-business.html">Digital & Business Skills</a></li>
+                  <li><a href="dressmaking-skills.html">Dressmaking & Practical Skills</a></li>
+              </ul>
+          </li>
+
+          <li><a href="gallery.html">gallery</a></li>
+      </ul>
+    </nav>
+    <!-- Course Hero Section -->
+    <section class="course-hero">
+        <div class="course-hero-content">
+            <h1>Digital & Business Skills</h1>
+            <p>Master the essential digital skills needed for modern business success and online entrepreneurship</p>
+        </div>
+    </section>
+
+    <div class="course-content">
+        <!-- Course Overview -->
+        <section class="course-overview">
+            <h2>Transform Your Digital Future</h2>
+            <p>Our comprehensive digital skills programs are designed to equip youth, entrepreneurs, and professionals with practical digital literacy and business skills essential for success in today's digital economy.</p>
+            
+            <div class="overview-stats">
+                <div class="stat-box">
+                    <div class="stat-number">6 Months</div>
+                    <div class="stat-label">Duration</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">Full/Part-time</div>
+                    <div class="stat-label">Flexible Mode</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">Certificate</div>
+                    <div class="stat-label">Qualification</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">Hands-on</div>
+                    <div class="stat-label">Training</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Business Skills Course -->
+        <div class="courses-grid">
+            <section id="digital-business" class="course-section">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="course-title">Business Digital Skills Course</h3>
+                        <p>Complete certification in Business Digital Skills and Online Entrepreneurship</p>
+                    </div>
+                </div>
+                
+                <div class="course-body">
+                    <p><strong>Target Group:</strong> Youth, entrepreneurs, and professionals seeking practical digital skills for business</p>
+                    <p><strong>Outcome:</strong> Certificate in Business Digital Skills and Online Entrepreneurship</p>
+                    
+                    <div class="month-grid">
+                        <div class="month-card">
+                            <h4><i class="fas fa-calendar-alt"></i> Month 1: Digital Foundations & Computer Literacy</h4>
+                            <ul>
+                                <li>Introduction to ICT</li>
+                                <li>Importance of digital skills in business</li>
+                                <li>Overview of hardware and software</li>
+                                <li>Basic Computer Operations</li>
+                                <li>File management, typing, and navigation</li>
+                                <li>Operating systems and desktop tools</li>
+                                <li>Internet & Email Use</li>
+                                <li>Browsing, search engines, and safe practices</li>
+                                <li>Creating and managing professional email accounts</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-file-alt"></i> Month 2: Office Productivity Tools</h4>
+                            <ul>
+                                <li>Microsoft Word / Google Docs</li>
+                                <li>Document formatting, templates, and reports</li>
+                                <li>Microsoft Excel / Google Sheets</li>
+                                <li>Data entry, formulas, budgeting, and analysis</li>
+                                <li>Microsoft PowerPoint / Google Slides</li>
+                                <li>Creating business presentations and proposals</li>
+                                <li>Cloud Storage & Collaboration</li>
+                                <li>Using Google Drive, OneDrive, and shared folders</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-bullhorn"></i> Month 3: Digital Communication & Marketing</h4>
+                            <ul>
+                                <li>Social Media for Business</li>
+                                <li>Facebook, Instagram, WhatsApp Business</li>
+                                <li>Content creation and audience engagement</li>
+                                <li>Digital Branding</li>
+                                <li>Logos, color schemes, and brand identity</li>
+                                <li>Email Marketing Basics</li>
+                                <li>Mailchimp or similar tools</li>
+                                <li>Building mailing lists and newsletters</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-shopping-cart"></i> Month 4: E-Commerce & Online Business Tools</h4>
+                            <ul>
+                                <li>Introduction to E-Commerce</li>
+                                <li>Selling on Jumia, Kilimall, or social platforms</li>
+                                <li>Product photography and descriptions</li>
+                                <li>Mobile Money & Digital Payments</li>
+                                <li>M-Pesa, Airtel Money, PayPal basics</li>
+                                <li>Online Customer Service</li>
+                                <li>Chat tools, feedback systems, and professionalism</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-chart-line"></i> Month 5: Business Planning & Digital Finance</h4>
+                            <ul>
+                                <li>Digital Budgeting & Record Keeping</li>
+                                <li>Using Excel or apps for financial tracking</li>
+                                <li>Online Business Plans</li>
+                                <li>Templates, SWOT analysis, and goal setting</li>
+                                <li>Digital Compliance & Ethics</li>
+                                <li>Data privacy, copyright, and responsible use</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-graduation-cap"></i> Month 6: Entrepreneurship & Final Assessment</h4>
+                            <ul>
+                                <li>Launching a Digital Business</li>
+                                <li>Steps to start, market, and grow online</li>
+                                <li>Portfolio Development</li>
+                                <li>Showcase of digital work: documents, designs, plans</li>
+                                <li>Final Exams & Certification</li>
+                                <li>Practical and theory assessments</li>
+                                <li>Graduation and presentation of business ideas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inclusive Beadwork Skills Course -->
+            <section id="beadwork" class="course-section">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div>
+                        <h3 class="course-title">Inclusive Beadwork Skills Course</h3>
+                        <p>Certificate in Inclusive Beadwork and Creative Enterprise</p>
+                    </div>
+                </div>
+                
+                <div class="course-body">
+                    <p><strong>Target Group:</strong> Youth, women, and learners with diverse abilities seeking vocational and creative empowerment</p>
+                    <p><strong>Outcome:</strong> Certificate in Inclusive Beadwork and Creative Enterprise</p>
+                    
+                    <div class="month-grid">
+                        <div class="month-card">
+                            <h4><i class="fas fa-heart"></i> Month 1: Introduction to Beadwork & Inclusion</h4>
+                            <ul>
+                                <li>Orientation & Values-Based Learning</li>
+                                <li>Respect, patience, and collaboration in creative spaces</li>
+                                <li>Understanding diverse learner needs and strengths</li>
+                                <li>History & Cultural Significance of Beadwork</li>
+                                <li>Kenyan beadwork traditions and symbolism</li>
+                                <li>Global styles and applications</li>
+                                <li>Basic Tools & Materials</li>
+                                <li>Types of beads, threads, needles, and safety practices</li>
+                                <li>Organizing inclusive workspaces</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-hands"></i> Month 2: Foundational Beading Techniques</h4>
+                            <ul>
+                                <li>Threading & Stitching Basics</li>
+                                <li>Single-thread, double-thread, and loop techniques</li>
+                                <li>Bead alignment and tension control</li>
+                                <li>Simple Projects</li>
+                                <li>Bracelets, keychains, and bookmarks</li>
+                                <li>Color matching and pattern repetition</li>
+                                <li>Supportive Group Work</li>
+                                <li>Peer mentoring and collaborative creation</li>
+                                <li>Encouraging learners with varied abilities</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-palette"></i> Month 3: Design & Pattern Development</h4>
+                            <ul>
+                                <li>Creative Thinking & Planning</li>
+                                <li>Sketching beadwork designs</li>
+                                <li>Using grids and templates</li>
+                                <li>Color Theory & Symbolism</li>
+                                <li>Cultural meanings and emotional impact</li>
+                                <li>Inclusive design choices</li>
+                                <li>Intermediate Projects</li>
+                                <li>Necklaces, earrings, and decorative bands</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-star"></i> Month 4: Advanced Techniques & Customization</h4>
+                            <ul>
+                                <li>Layering & 3D Beadwork</li>
+                                <li>Multi-strand designs and raised patterns</li>
+                                <li>Personalized Items</li>
+                                <li>Name tags, initials, and custom motifs</li>
+                                <li>Inclusive Teaching Practices</li>
+                                <li>Adapting tools and methods for learners with disabilities</li>
+                                <li>Building confidence through guided repetition</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-users"></i> Month 5: Product Development & Community Engagement</h4>
+                            <ul>
+                                <li>Creating Market-Ready Items</li>
+                                <li>Packaging, finishing, and presentation</li>
+                                <li>Group Projects & Exhibitions</li>
+                                <li>Collaborative murals, wall hangings, or themed collections</li>
+                                <li>Community Outreach</li>
+                                <li>Beadwork for awareness campaigns or cultural events</li>
+                                <li>Inclusive storytelling through design</li>
+                            </ul>
+                        </div>
+
+                        <div class="month-card">
+                            <h4><i class="fas fa-trophy"></i> Month 6: Entrepreneurship & Final Assessment</h4>
+                            <ul>
+                                <li>Business Skills for Creatives</li>
+                                <li>Pricing, budgeting, and customer service</li>
+                                <li>Selling via social media and local markets</li>
+                                <li>Portfolio & Showcase Preparation</li>
+                                <li>Documenting work and presenting to stakeholders</li>
+                                <li>Final Practical & Theory Exams</li>
+                                <li>Inclusive assessment methods</li>
+                                <li>Graduation and certificate issuance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Additional Information -->
+        <section class="additional-info">
+            <h2>Why Choose Our Digital & Business Skills Programs?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Certified Training</h4>
+                    <p>Receive recognized certificates that enhance your career prospects and business opportunities</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>Modern Facilities</h4>
+                    <p>Learn with up-to-date equipment and software in our well-equipped computer labs</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Inclusive Learning</h4>
+                    <p>Our programs accommodate diverse learning needs and abilities, ensuring everyone can succeed</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>Practical Skills</h4>
+                    <p>Gain hands-on experience with real-world projects and business applications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Section -->
+        <section class="apply-section">
+            <h2>Ready to Start Your Digital Journey?</h2>
+            <p>Join hundreds of successful graduates who have transformed their careers through our digital skills programs. Apply today and take the first step towards your digital future.</p>
+            <a href="https://form.jotform.com/252374240578561" class="apply-btn">
+                <i class="fas fa-paper-plane"></i>
+                Apply Now
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <h3>office</h3>
+                <p>Nairobi</p>
+                <p>Kangudo Road, Chokaa</p>
+                <p>Shujaa</p>
+                <p class="email-id">fiestatrainers@gmail.com</p>
+                <h4>+254743670728</h4>
+            </div>
+            <div class="col">
+                <h3>links</h3>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="manage.html">management</a></li>
+                    <li><a href="courses.html">courses</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <hr><br>
+        <div class="terms">
+            <p>Copyright © 2025 Fiesta trainers and caterers. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
