@@ -341,6 +341,7 @@
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    margin-right: 14px;
 }
 
 .assessment-card::before {
@@ -421,8 +422,16 @@
     border-radius: var(--border-radius-l);
     box-shadow: var(--shadow-lg);
     margin-bottom: var(--space-xl);
+    width: 100%;
+    position: relative;
 }
-
+ @media (max-width: 1100px) {
+    .grading-section {
+        width: 114%;
+        position: relative;
+        left: -36px;
+    }
+ }
 .grading-intro {
     text-align: center;
     margin-bottom: var(--space-xl);
@@ -586,6 +595,13 @@
     box-shadow: var(--shadow-lg);
     margin-bottom: var(--space-xl);
 }
+ @media (max-width: 1100px) {
+    .certification-section {
+        width: 114%;
+        position: relative;
+        left: -36px;
+    }
+ }
 
 .cert-requirements {
     display: grid;

@@ -763,8 +763,7 @@ h2 {
 /* Courses Section */
 .courses-section {
     position: relative;
-    margin: var(--space-xl) auto;
-    padding: 0 var(--space-l);
+   
     max-width: var(--site-max-width);
 }
 
@@ -777,6 +776,7 @@ h2 {
     transform: translateY(-50%);
     z-index: 10;
     pointer-events: none;
+    margin-left: 10px;
 }
 
 .slider-buttons button {
@@ -790,11 +790,12 @@ h2 {
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     pointer-events: auto;
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 15px;
 }
 
 .slider-buttons button:hover {
@@ -810,10 +811,14 @@ h2 {
     padding: var(--space-l) 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+     /* ✅ Snap settings */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* smoother on mobile */
+  margin-left: 12px;
 }
 
 .card-slider::-webkit-scrollbar {
-    display: none;
+    display: flex;
 }
 
 .course-card {
@@ -827,6 +832,9 @@ h2 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
     flex-shrink: 0;
+    /* ✅ Each card is a snap point */
+    scroll-snap-align: start;
+    margin-left: 15px;
 }
 
 .course-card:hover {
@@ -841,6 +849,12 @@ h2 {
     object-fit: cover;
     margin-bottom: var(--space-m);
     transition: transform 0.3s ease;
+}
+@media (max-width: 378px){
+    .course-card {
+       max-width: 95%;
+       margin-left: 10px;
+    }
 }
 
 .course-card:hover img {
@@ -890,10 +904,6 @@ h2 {
     justify-content: center;
     align-items: center;
     padding: var(--space-xl);
-    background: white;
-    border-radius: var(--border-radius-l);
-    margin: var(--space-xl) var(--space-l);
-    box-shadow: var(--shadow-sm);
 }
 
 .video-container {
@@ -911,6 +921,7 @@ h2 {
     border-radius: var(--border-radius-m);
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    width: 125%;
 }
 
 .homepage-video {

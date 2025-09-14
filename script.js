@@ -1,42 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
     // ======= CARD SLIDER =======
-    const slider = document.querySelector(".card-slider");
-    const prevButton = document.getElementById("prevSlide");
-    const nextButton = document.getElementById("nextSlide");
-    const coursesSection = document.querySelector(".courses-section");
+const slider = document.querySelector(".card-slider");
+const prevButton = document.getElementById("prevSlide");
+const nextButton = document.getElementById("nextSlide");
+const coursesSection = document.querySelector(".courses-section");
 
-    if (slider) {
-        const card = document.querySelector(".course-card");
-        const cardWidth = card ? card.offsetWidth + 20 : 0;
-        const scrollAmount = cardWidth * 2;
+if (slider) {
+    const card = document.querySelector(".course-card");
 
-        function scrollNext() {
-            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-                slider.scrollTo({ left: 0, behavior: "smooth" });
-            } else {
-                slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            }
+    // ✅ Get margin-right dynamically instead of hardcoding 25
+    const cardStyles = card ? window.getComputedStyle(card) : null;
+    const marginRight = cardStyles ? parseInt(cardStyles.marginRight) : 0;
+    const cardWidth = card ? card.offsetWidth + marginRight : 0;
+
+    const scrollAmount = cardWidth; // one card at a time
+
+    function scrollNext() {
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+            slider.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+            slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
         }
-
-        function scrollPrev() {
-            if (slider.scrollLeft === 0) {
-                slider.scrollTo({ left: slider.scrollWidth, behavior: "smooth" });
-            } else {
-                slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-            }
-        }
-
-        coursesSection.addEventListener("mouseenter", () => {
-            document.querySelector(".slider-buttons").style.display = "flex";
-        });
-
-        coursesSection.addEventListener("mouseleave", () => {
-            document.querySelector(".slider-buttons").style.display = "none";
-        });
-
-        nextButton.addEventListener("click", scrollNext);
-        prevButton.addEventListener("click", scrollPrev);
     }
+
+    function scrollPrev() {
+        if (slider.scrollLeft === 0) {
+            slider.scrollTo({ left: slider.scrollWidth, behavior: "smooth" });
+        } else {
+            slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        }
+    }
+
+    coursesSection.addEventListener("mouseenter", () => {
+        document.querySelector(".slider-buttons").style.display = "flex";
+    });
+
+    coursesSection.addEventListener("mouseleave", () => {
+        document.querySelector(".slider-buttons").style.display = "none";
+    });
+
+    nextButton.addEventListener("click", scrollNext);
+    prevButton.addEventListener("click", scrollPrev);
+}
 
     // ======= SLIDESHOW =======
     let slideIndex = 0;
