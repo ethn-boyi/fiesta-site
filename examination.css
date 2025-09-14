@@ -100,6 +100,7 @@
                     opacity: 1;
                     transform: translateY(0);
                 }
+                
             }
 
             .dropdown-content a {
@@ -142,7 +143,7 @@
                 top: 0;
                 right: 0;
                 height: 100vh;
-                width: 280px;
+                width: 360px;
                 z-index: 999;
                 background: rgba(255, 255, 255, 0.95);
                 backdrop-filter: blur(20px);
