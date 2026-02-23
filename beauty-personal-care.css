@@ -380,7 +380,13 @@ a:hover {
   gap: var(--space-m);
   margin-top: var(--space-m);
 }
-
+@media (max-width: 1100px) {
+  .highlights {
+    padding-right: 30px;
+    position: relative;
+    left: -105px;
+  }
+}
 .highlight-item {
   background: var(--light-color);
   border-radius: var(--border-radius-m);

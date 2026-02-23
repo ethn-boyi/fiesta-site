@@ -805,7 +805,7 @@ h2 {
 
 .card-slider {
     display: flex;
-    gap: var(--space-l);
+    gap: var(--space-xs);
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: var(--space-l) 0;
