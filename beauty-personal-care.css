@@ -2,10 +2,10 @@
    THEME COLORS (Updated to match styles.css)
 ============================== */
 :root {
-  --primary-color: #3b141c;   /* Deep Wine (Header/Footer Main Color) */
-  --secondary-color: #f3961c; /* Fiesta Orange */
-  --light-color: #fff;        /* White */
-  --bg-color: #f8fafc;        /* Light background */
+  --primary-color: #3b141c;
+  --secondary-color: #f3961c;
+  --light-color: #fff;
+  --bg-color: #f8fafc;
   --light-pink-color: #faf4f5; 
   --dark-color: #252525;
 
@@ -32,7 +32,21 @@
   --font-weight-bold: 700;
 }
 
-/* Navigation styling */
+/* ==============================
+   GLOBAL FIX — prevents horizontal overflow on all screens
+============================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ==============================
+   NAVIGATION
+============================== */
 nav {
     height: 80px;
     width: 100%;
@@ -103,7 +117,9 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
-/* Dropdown Styles */
+/* ==============================
+   DROPDOWN
+============================== */
 .dropdown {
     position: relative;
 }
@@ -124,14 +140,8 @@ a:hover {
 }
 
 @keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .dropdown-content a {
@@ -169,7 +179,9 @@ a:hover {
     transform: rotate(180deg);
 }
 
-/* Sidebar */
+/* ==============================
+   SIDEBAR
+============================== */
 .sidebar {
     position: fixed;
     top: 0;
@@ -205,30 +217,9 @@ a:hover {
     cursor: pointer;
 }
 
-@media (max-width: 1100px) {
-    .hideonMobile {
-        display: none;
-    }
-    .materials-symbols-outlined {
-        display: block;
-    }
-}
-
-@media (max-width: 900px) {
-    .logo {
-        font-size: var(--font-size-s);
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-}
-
-/* === Sidebar dropdown support === */
+/* ==============================
+   SIDEBAR DROPDOWN
+============================== */
 .sidebar-dropdown {
     width: 100%;
 }
@@ -298,7 +289,7 @@ a:hover {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(90, 56, 37, 0.65); /* Coffee overlay */
+  background: rgba(90, 56, 37, 0.65);
 }
 
 .hero-content {
@@ -376,17 +367,12 @@ a:hover {
 
 .highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-m);
   margin-top: var(--space-m);
+  /* REMOVED the broken left: -105px hack */
 }
-@media (max-width: 1100px) {
-  .highlights {
-    padding-right: 30px;
-    position: relative;
-    left: -105px;
-  }
-}
+
 .highlight-item {
   background: var(--light-color);
   border-radius: var(--border-radius-m);
@@ -468,12 +454,14 @@ a:hover {
   color: #fff;
   font-weight: bold;
   font-size: 1.5rem;
-  width: 50px; height: 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: var(--space-m);
+  flex-shrink: 0; /* FIX: prevents circle from squishing on small screens */
 }
 
 .month-info h3 {
@@ -552,7 +540,9 @@ a:hover {
   color: var(--secondary-color);
 }
 
-/* Footer */
+/* ==============================
+   FOOTER
+============================== */
 footer {
     background: linear-gradient(135deg, #00093c, #2d0b00);
     color: white;
@@ -635,21 +625,92 @@ footer hr {
     color: var(--medium-grey-color);
 }
 
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+/* ==============================
+   RESPONSIVE BREAKPOINTS
+============================== */
+
+/* Tablet and below */
+@media (max-width: 1100px) {
+    .hideonMobile {
+        display: none;
     }
-    
-    .stats-container {
+    .materials-symbols-outlined {
+        display: block;
+    }
+    /* FIXED: removed broken left: -105px hack */
+    .highlights {
+        padding-right: 0;
+        position: static;
+        left: auto;
+    }
+}
+
+/* Stack the overview grid on medium screens */
+@media (max-width: 900px) {
+    .logo {
+        font-size: var(--font-size-s);
+    }
+    /* FIX: stack overview grid vertically instead of side by side */
+    .overview-grid {
         grid-template-columns: 1fr;
     }
-    
-    .course-card {
-        min-width: 280px;
+    /* FIX: stats row becomes horizontal on tablet */
+    .overview-stats {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
-    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    /* FIX: full-width stat items on mobile */
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+    /* FIX: highlights single column on mobile */
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
     .dropdown-content {
         min-width: 250px;
+    }
+    /* FIX: reduce padding on cards for mobile */
+    .month-card {
+        padding: var(--space-m);
+    }
+    .curriculum-section {
+        padding: 40px 15px;
+    }
+    .course-overview {
+        padding: 40px 15px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
     }
 }
 
@@ -658,12 +719,13 @@ footer hr {
         text-align: center;
         padding: 0 var(--space-s);
     }
-    
     nav {
         padding: 0 var(--space-s);
     }
-    
     .hero-content {
         padding: 0 var(--space-s);
+    }
+    .hero-title {
+        font-size: 1.5rem;
     }
 }
