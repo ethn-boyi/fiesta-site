@@ -42,12 +42,14 @@
           </li>
           
           <li class="hideonMobile"><a href="gallery.html">gallery</a></li>
-          <span class="materials-symbols-outlined" onclick="showSidebar()">☰</span>
+          <li class="menu-toggle"><span class="materials-symbols-outlined" onclick="showSidebar()">☰</span></li>
       </ul>
 
       <!-- Sidebar for mobile -->
       <ul class="sidebar">
-          <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+          <li class="sidebar-close">
+              <span class="material-symbols-outlined" onclick="hideSidebar()">✖</span>
+          </li>
           <li><a href="index.html">home</a></li>
 
           <!-- About dropdown (mobile) -->
@@ -159,9 +161,9 @@
         </ul>
       </div>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
     <hr>
